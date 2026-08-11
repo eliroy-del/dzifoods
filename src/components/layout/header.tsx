@@ -81,7 +81,7 @@ export function Header() {
           )}
         >
           <div className="container-luxe flex h-18 items-center justify-between gap-6 lg:h-20">
-            <Logo tone={overlay ? "light" : "auto"} showTagline />
+            <Logo tone={overlay ? "light" : "auto"} priority />
 
             <nav aria-label="Main" className="hidden items-center gap-0.5 lg:flex">
               {NAV_ITEMS.map((item) => {

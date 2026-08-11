@@ -33,7 +33,7 @@ export function restaurantSchema() {
     telephone: CONTACT.phone,
     email: CONTACT.email,
     image: [absoluteUrl("/images/hero-signature.webp"), absoluteUrl("/images/interior-dining.webp")],
-    logo: absoluteUrl("/icon.svg"),
+    logo: absoluteUrl("/images/logo.png"),
     priceRange: SITE.priceRange,
     servesCuisine: [...SITE.cuisine],
     currenciesAccepted: "GHS",

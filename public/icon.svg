@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="DZIFOODS">
-  <rect width="512" height="512" rx="96" fill="#103D2E"/>
-  <text x="256" y="290" text-anchor="middle" font-family="Georgia, serif" font-size="148" font-weight="600" fill="#F97316">DZI</text>
+  <rect width="512" height="512" rx="96" fill="#185323"/>
+  <circle cx="256" cy="256" r="168" fill="#3a6c44"/>
+  <circle cx="256" cy="256" r="128" fill="#185323"/>
+  <text x="256" y="290" text-anchor="middle" font-family="Georgia, serif" font-size="120" font-weight="600" fill="#ecb751">DZI</text>
+  <rect x="96" y="330" width="320" height="52" rx="26" fill="#ba2e1b"/>
 </svg>

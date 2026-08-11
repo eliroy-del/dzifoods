@@ -21,9 +21,9 @@ const buttonVariants = cva(
       variant: {
         /** The conversion button: reserve, order, checkout. */
         ember:
-          "btn-shine bg-accent text-accent-foreground shadow-[0_10px_35px_-12px_rgb(249_115_22/0.65)] hover:bg-ember-soft hover:shadow-[0_18px_50px_-14px_rgb(249_115_22/0.75)]",
+          "btn-shine bg-accent text-accent-foreground shadow-[0_10px_35px_-12px_rgb(186_46_27/0.65)] hover:bg-ember-soft hover:shadow-[0_18px_50px_-14px_rgb(186_46_27/0.75)]",
         forest:
-          "btn-shine bg-forest text-cream hover:bg-forest-soft shadow-[0_10px_35px_-14px_rgb(16_61_46/0.8)]",
+          "btn-shine bg-forest text-cream hover:bg-forest-soft shadow-[0_10px_35px_-14px_rgb(24_83_35/0.8)]",
         gold: "btn-shine border border-gold/40 bg-gold/12 text-gold hover:bg-gold/20",
         solid: "bg-foreground text-background hover:bg-foreground/90",
         outline:

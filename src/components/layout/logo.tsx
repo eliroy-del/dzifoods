@@ -1,27 +1,29 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { SITE } from "@/constants/site";
 import { cn } from "@/lib/utils";
 
+interface LogoMarkProps {
+  className?: string;
+  size?: number;
+  priority?: boolean;
+}
+
 /**
- * The DZIFOODS mark: a flame held inside a plate ring — fire and hospitality,
- * the two things the whole brand rests on.
+ * Official DZIFOODS badge — flame, cutlery, and wordmark on the ribbon.
  */
-export function LogoMark({ className }: { className?: string }) {
+export function LogoMark({ className, size = 52, priority = false }: LogoMarkProps) {
   return (
-    <svg viewBox="0 0 40 40" className={cn("size-9", className)} aria-hidden focusable="false">
-      <circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" strokeOpacity="0.28" />
-      <circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" strokeOpacity="0.14" />
-      <path
-        d="M20 8.5c2.4 3.6 6.4 5.9 6.4 11.1 0 3.9-2.9 7-6.4 7s-6.4-3.1-6.4-7c0-2.4 1-4 2.3-5.6.5 1.6 1.4 2.6 2.6 3.1-.6-3.2.3-6 1.5-8.6Z"
-        fill="currentColor"
-      />
-      <path
-        d="M20 31.5c-4.2 0-7.6-1.2-7.6-2.6h15.2c0 1.4-3.4 2.6-7.6 2.6Z"
-        fill="currentColor"
-        fillOpacity="0.45"
-      />
-    </svg>
+    <Image
+      src="/images/logo.png"
+      alt=""
+      width={size}
+      height={size}
+      priority={priority}
+      className={cn("size-[3.25rem] object-contain", className)}
+      aria-hidden
+    />
   );
 }
 
@@ -31,9 +33,19 @@ interface LogoProps {
   tone?: "auto" | "light";
   showTagline?: boolean;
   href?: string;
+  /** Show the text wordmark beside the badge (badge already includes the name). */
+  showWordmark?: boolean;
+  priority?: boolean;
 }
 
-export function Logo({ className, tone = "auto", showTagline = false, href = "/" }: LogoProps) {
+export function Logo({
+  className,
+  tone = "auto",
+  showTagline = false,
+  showWordmark = false,
+  href = "/",
+  priority = false,
+}: LogoProps) {
   return (
     <Link
       href={href}
@@ -45,30 +57,36 @@ export function Logo({ className, tone = "auto", showTagline = false, href = "/"
       )}
     >
       <LogoMark
+        priority={priority}
         className={cn(
-          "text-accent transition-transform duration-700 ease-[var(--ease-luxe)] group-hover/logo:rotate-12",
+          "drop-shadow-sm transition-transform duration-700 ease-[var(--ease-luxe)] group-hover/logo:rotate-6",
         )}
       />
-      <span className="flex flex-col leading-none">
-        <span
-          className={cn(
-            "font-display text-[1.15rem] font-semibold tracking-[0.18em]",
-            tone === "light" ? "text-white" : "text-foreground",
-          )}
-        >
-          DZI<span className="text-accent">FOODS</span>
+      {showWordmark || showTagline ? (
+        <span className="flex flex-col leading-none">
+          {showWordmark ? (
+            <span
+              className={cn(
+                "font-display text-[1.15rem] font-semibold tracking-[0.18em]",
+                tone === "light" ? "text-white" : "text-foreground",
+              )}
+            >
+              DZI<span className="text-accent">FOODS</span>
+            </span>
+          ) : null}
+          {showTagline ? (
+            <span
+              className={cn(
+                "font-ui text-[0.55rem] tracking-[0.32em] uppercase",
+                showWordmark ? "mt-1" : "",
+                tone === "light" ? "text-white/60" : "text-muted-foreground",
+              )}
+            >
+              Accra · Est. 2013
+            </span>
+          ) : null}
         </span>
-        {showTagline ? (
-          <span
-            className={cn(
-              "font-ui mt-1 text-[0.55rem] tracking-[0.32em] uppercase",
-              tone === "light" ? "text-white/60" : "text-muted-foreground",
-            )}
-          >
-            Accra · Est. 2013
-          </span>
-        ) : null}
-      </span>
+      ) : null}
     </Link>
   );
 }

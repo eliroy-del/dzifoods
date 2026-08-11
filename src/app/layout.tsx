@@ -68,6 +68,14 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
   formatDetection: { telephone: true, address: true, email: true },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   other: {
     "geo.region": "GH-AA",
     "geo.placename": "Accra",
@@ -76,8 +84,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0b0d0c" },
-    { media: "(prefers-color-scheme: light)", color: "#fdfcf8" },
+    { media: "(prefers-color-scheme: dark)", color: "#08110c" },
+    { media: "(prefers-color-scheme: light)", color: "#f7faf4" },
   ],
   colorScheme: "dark light",
   width: "device-width",
