@@ -1,0 +1,495 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* next-themes toggles a `.dark` class on <html>. */
+@custom-variant dark (&:is(.dark *));
+
+/* ==========================================================================
+   DZIFOODS DESIGN TOKENS
+   Semantic variables first, so a CMS-driven rebrand only touches this block.
+   ========================================================================== */
+
+:root {
+  /* Immutable brand palette */
+  --brand-forest: #103d2e;
+  --brand-forest-deep: #0a2a20;
+  --brand-forest-soft: #1b5943;
+  --brand-charcoal: #111111;
+  --brand-ember: #f97316;
+  --brand-ember-soft: #fb923c;
+  --brand-gold: #d4af37;
+  --brand-cream: #fff8ee;
+  --brand-bone: #fdfcf8;
+
+  /* Light ("Daylight") theme — warm editorial paper */
+  --background: #fdfcf8;
+  --foreground: #14100c;
+  --surface: #fff8ee;
+  --surface-2: #f6f1e6;
+  --card: #ffffff;
+  --card-foreground: #14100c;
+  --popover: #ffffff;
+  --popover-foreground: #14100c;
+  --muted: #f1ebdf;
+  --muted-foreground: #6b6357;
+  --border: #e6dece;
+  --input: #ded5c2;
+  --ring: #f97316;
+  --primary: #103d2e;
+  --primary-foreground: #fff8ee;
+  --secondary: #111111;
+  --secondary-foreground: #fff8ee;
+  --accent: #f97316;
+  --accent-foreground: #1a0d02;
+  --gold: #a9862a;
+  --gold-foreground: #14100c;
+  --success: #16a34a;
+  --destructive: #dc2626;
+  --overlay: 12 10 8;
+
+  --radius: 0.875rem;
+}
+
+.dark {
+  /* Dark ("Candlelight") theme — the default DZIFOODS experience */
+  --background: #0b0d0c;
+  --foreground: #f7f3ea;
+  --surface: #111413;
+  --surface-2: #161a18;
+  --card: #121614;
+  --card-foreground: #f7f3ea;
+  --popover: #10130f;
+  --popover-foreground: #f7f3ea;
+  --muted: #1b201d;
+  --muted-foreground: #a2a79d;
+  --border: #262b27;
+  --input: #2d332e;
+  --ring: #f97316;
+  --primary: #1b5943;
+  --primary-foreground: #f2fff9;
+  --secondary: #f7f3ea;
+  --secondary-foreground: #111111;
+  --accent: #f97316;
+  --accent-foreground: #1a0d02;
+  --gold: #d4af37;
+  --gold-foreground: #14100c;
+  --success: #22c55e;
+  --destructive: #ef4444;
+  --overlay: 0 0 0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-success: var(--success);
+  --color-destructive: var(--destructive);
+
+  --color-forest: var(--brand-forest);
+  --color-forest-deep: var(--brand-forest-deep);
+  --color-forest-soft: var(--brand-forest-soft);
+  --color-charcoal: var(--brand-charcoal);
+  --color-ember: var(--brand-ember);
+  --color-ember-soft: var(--brand-ember-soft);
+  --color-cream: var(--brand-cream);
+  --color-bone: var(--brand-bone);
+
+  --font-display: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-ui: var(--font-poppins), var(--font-inter), ui-sans-serif, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 0.375rem);
+  --radius-md: calc(var(--radius) - 0.187rem);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 0.375rem);
+  --radius-2xl: calc(var(--radius) + 0.75rem);
+  --radius-3xl: calc(var(--radius) + 1.5rem);
+
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.06), 0 8px 30px -12px rgb(0 0 0 / 0.25);
+  --shadow-lift: 0 24px 60px -20px rgb(0 0 0 / 0.45);
+  --shadow-luxe: 0 40px 120px -40px rgb(16 61 46 / 0.55);
+  --shadow-glow: 0 0 0 1px rgb(249 115 22 / 0.35), 0 12px 45px -10px rgb(249 115 22 / 0.45);
+
+  --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-steam: steam 7s ease-in-out infinite;
+  --animate-float: float 9s ease-in-out infinite;
+  --animate-float-slow: float 16s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.6s linear infinite;
+  --animate-marquee: marquee 42s linear infinite;
+  --animate-ken-burns: ken-burns 26s ease-in-out infinite alternate;
+  --animate-glow-pulse: glow-pulse 4.5s ease-in-out infinite;
+  --animate-spin-slow: spin 22s linear infinite;
+  --animate-scroll-hint: scroll-hint 2.2s ease-in-out infinite;
+  --animate-accordion-down: accordion-down 0.4s var(--ease-luxe);
+  --animate-accordion-up: accordion-up 0.32s var(--ease-luxe);
+
+  --breakpoint-3xl: 120rem;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes steam {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.9);
+  }
+  35% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-46px) scale(1.5);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) rotate(3deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes ken-burns {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate3d(1.5%, -1.5%, 0);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes scroll-hint {
+  0% {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(180%);
+  }
+}
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings:
+      "cv11" 1,
+      "ss01" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--accent) 32%, transparent);
+    color: var(--foreground);
+  }
+
+  :focus-visible {
+    @apply outline-ring outline-2 outline-offset-2;
+  }
+
+  /* Anchor offset for the sticky header */
+  [id] {
+    scroll-margin-top: 7rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--surface);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, var(--muted-foreground) 45%, transparent);
+    border-radius: 999px;
+    border: 2px solid var(--surface);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+  }
+}
+
+/* ==========================================================================
+   LENIS SMOOTH SCROLL
+   ========================================================================== */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
+
+@utility container-luxe {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 88rem;
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+  @media (min-width: 1280px) {
+    padding-inline: 3rem;
+  }
+}
+
+/* Frosted panel used for luxury cards, nav and testimonial glass */
+@utility glass {
+  background: color-mix(in oklab, var(--card) 62%, transparent);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid color-mix(in oklab, var(--foreground) 10%, transparent);
+}
+
+@utility glass-dark {
+  background: rgb(8 10 9 / 0.55);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid rgb(255 255 255 / 0.1);
+}
+
+@utility text-gradient-gold {
+  background-image: linear-gradient(
+    100deg,
+    var(--brand-gold) 0%,
+    #f6e7a8 38%,
+    var(--brand-gold) 62%,
+    #8f6f16 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-ember {
+  background-image: linear-gradient(100deg, #fdba74 0%, var(--brand-ember) 55%, #c2410c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Subtle film grain that keeps large dark areas from banding */
+@utility grain {
+  position: relative;
+  isolation: isolate;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.045;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@utility hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility mask-fade-x {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+@utility mask-fade-b {
+  mask-image: linear-gradient(to bottom, black 62%, transparent);
+}
+
+/* Editorial section rhythm */
+@utility section {
+  padding-block: 5rem;
+  @media (min-width: 768px) {
+    padding-block: 7rem;
+  }
+  @media (min-width: 1280px) {
+    padding-block: 8.5rem;
+  }
+}
+
+@utility link-underline {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+    height: 1px;
+    width: 100%;
+    transform-origin: left;
+    transform: scaleX(0);
+    background: currentColor;
+    transition: transform 0.45s var(--ease-luxe);
+  }
+  &:hover::after,
+  &:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+/* Sweeping specular highlight for primary buttons */
+@utility btn-shine {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      110deg,
+      transparent 25%,
+      rgb(255 255 255 / 0.28) 50%,
+      transparent 75%
+    );
+    transform: translateX(-120%);
+    transition: transform 0.9s var(--ease-luxe);
+  }
+  &:hover::before {
+    transform: translateX(120%);
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   FORCED COLORS / HIGH CONTRAST
+   ========================================================================== */
+
+@media (forced-colors: active) {
+  .glass,
+  .glass-dark {
+    background: Canvas;
+    border-color: CanvasText;
+  }
+  button,
+  a {
+    forced-color-adjust: auto;
+  }
+}
