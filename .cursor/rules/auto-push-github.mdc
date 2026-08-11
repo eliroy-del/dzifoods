@@ -1,0 +1,17 @@
+---
+description: Automatically commit and push completed work to GitHub
+alwaysApply: true
+---
+
+# Auto push to GitHub
+
+For this repository, after finishing a meaningful set of changes:
+
+1. Stage the relevant files (never `.env*` or secrets).
+2. Create a concise commit with a HEREDOC message (follow existing git commit protocol).
+3. Immediately `git push origin HEAD` (or the current tracking branch).
+4. Confirm with the GitHub repo URL when done.
+
+Do **not** wait for the user to ask for a commit or push.
+
+Exceptions: skip push only if the user explicitly says not to, or if push would require force/destructive git operations.
