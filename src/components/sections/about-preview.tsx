@@ -1,18 +1,17 @@
 import { ArrowRight, Quote } from "lucide-react";
 import Link from "next/link";
 
-import { CountUp } from "@/components/motion/count-up";
 import { Parallax } from "@/components/motion/parallax";
-import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
+import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 import { ImageFrame } from "@/components/ui/media";
 import { Eyebrow } from "@/components/ui/section";
-import { ABOUT_STORY, STATS, VALUES } from "@/constants/content";
+import { ABOUT_STORY, VALUES } from "@/constants/content";
 import { EXECUTIVE_CHEF } from "@/constants/people";
 import { resolveIcon } from "@/lib/icons";
 import { cn } from "@/lib/utils";
 
-/** Editorial "our story" block with an offset image pair and animated counters. */
+/** Editorial "our story" block with an offset image pair. */
 export function AboutPreview({ className }: { className?: string }) {
   return (
     <section id="story" className={cn("section relative overflow-hidden", className)}>
