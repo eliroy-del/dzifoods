@@ -128,7 +128,6 @@ export function Header() {
               </a>
 
               <div className="hidden items-center gap-2 md:flex">
-                <LocaleCurrencySwitcher />
                 <ThemeToggle />
               </div>
 
