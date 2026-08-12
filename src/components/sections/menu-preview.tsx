@@ -1,14 +1,10 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 import { useState } from "react";
 
 import { DishCard } from "@/components/menu/dish-card";
 import { Reveal } from "@/components/motion/reveal";
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SectionHeading } from "@/components/ui/section";
 import { DISHES, MENU_CATEGORIES } from "@/constants/menu";
 import { cn } from "@/lib/utils";
 import type { MenuCategoryId } from "@/types";
@@ -30,26 +26,9 @@ export function MenuPreview({ className }: { className?: string }) {
   return (
     <section id="menu-preview" className={cn("section relative", className)}>
       <div className="container-luxe">
-        <Reveal>
-          <SectionHeading
-            eyebrow="The menu"
-            title="Seventeen menus. One kitchen that never repeats itself."
-            description="Rewritten every six weeks around what our nine farms are sending us. Below is a taste — the full card runs considerably longer."
-            action={
-              <Button asChild variant="outline" size="lg" uppercase>
-                <Link href="/menu">
-                  Full menu
-                  <ArrowRight className="size-4" aria-hidden />
-                </Link>
-              </Button>
-            }
-          />
-        </Reveal>
-
         <Tabs
           value={active}
           onValueChange={(value) => setActive(value as MenuCategoryId)}
-          className="mt-12"
         >
           <Reveal>
             <TabsList aria-label="Menu categories" className="pb-2">
