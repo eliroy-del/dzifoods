@@ -204,51 +204,7 @@ export const NAV_ITEMS: readonly NavItem[] = [
       },
     },
   },
-  {
-    label: "Experience",
-    href: "/about",
-    mega: {
-      columns: [
-        {
-          title: "The house",
-          links: [
-            { label: "Our story", href: "/about", description: "Twelve years, one obsession" },
-            { label: "Meet the kitchen", href: "/about#chef", description: "Chef Kwame Dzidzor" },
-            { label: "Gallery", href: "/gallery", description: "The room, the fire, the people" },
-            { label: "Guest stories", href: "/testimonials", description: "2,800+ verified reviews" },
-          ],
-        },
-        {
-          title: "Gather",
-          links: [
-            { label: "Private dining", href: "/private-dining", description: "Four rooms, doors closed" },
-            { label: "Events calendar", href: "/events", description: "Tastings, music, chef's tables" },
-            { label: "Weddings", href: "/private-dining#weddings", description: "Ceremonies for up to 120" },
-            { label: "Corporate", href: "/private-dining#corporate", description: "Discreet, timed, seamless" },
-          ],
-        },
-        {
-          title: "More",
-          links: [
-            { label: "Gift cards", href: "/gift-cards", description: "The easiest yes there is" },
-            { label: "Careers", href: "/careers", description: "Come cook with us" },
-            { label: "FAQ", href: "/faq", description: "Answers, quickly" },
-            { label: "Contact", href: "/contact", description: "Find us, call us, write to us" },
-          ],
-        },
-      ],
-      feature: {
-        eyebrow: "Private dining",
-        title: "The Cellar",
-        description:
-          "Twenty-four seats behind the wine wall, with a menu written for your table alone.",
-        image: "/images/private-dining.webp",
-        href: "/private-dining",
-        cta: "Enquire now",
-      },
-    },
-  },
-  { label: "Private Dining", href: "/private-dining" },
+  { label: "About", href: "/about" },
   { label: "Events", href: "/events" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
@@ -269,7 +225,6 @@ export const FOOTER_NAV = [
     title: "Discover",
     links: [
       { label: "Our story", href: "/about" },
-      { label: "Private dining", href: "/private-dining" },
       { label: "Events", href: "/events" },
       { label: "Gallery", href: "/gallery" },
       { label: "Guest stories", href: "/testimonials" },

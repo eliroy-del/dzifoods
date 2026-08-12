@@ -30,7 +30,6 @@ Open [http://localhost:3000](http://localhost:3000).
 | `/order` | Online ordering overview |
 | `/order/checkout` | Checkout flow with server action |
 | `/reservations` | Table booking form |
-| `/private-dining` | Private rooms + enquiry |
 | `/events` | Events calendar + seat booking |
 | `/about` | Story, timeline, chef, values |
 | `/gallery` | Masonry grid + keyboard lightbox |

@@ -59,7 +59,6 @@ export function restaurantSchema() {
     },
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Outdoor seating", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Private dining", value: true },
       { "@type": "LocationFeatureSpecification", name: "Wheelchair accessible", value: true },
       { "@type": "LocationFeatureSpecification", name: "Free Wi-Fi", value: true },
       { "@type": "LocationFeatureSpecification", name: "Valet parking", value: true },
@@ -68,7 +67,6 @@ export function restaurantSchema() {
     makesOffer: [
       { "@type": "Offer", name: "Table reservations", url: absoluteUrl("/reservations") },
       { "@type": "Offer", name: "Delivery & collection", url: absoluteUrl("/order") },
-      { "@type": "Offer", name: "Private dining", url: absoluteUrl("/private-dining") },
       { "@type": "Offer", name: "Gift cards", url: absoluteUrl("/gift-cards") },
     ],
   };

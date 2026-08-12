@@ -70,7 +70,7 @@ export const reservationSchema = z.object({
     .min(1, "At least one guest")
     .max(
       RESERVATION_SETTINGS.maxPartySize,
-      `For ${RESERVATION_SETTINGS.maxPartySize}+ guests, please use private dining`,
+      `For ${RESERVATION_SETTINGS.maxPartySize}+ guests, please contact our events team`,
     ),
   date: isoDate,
   time,

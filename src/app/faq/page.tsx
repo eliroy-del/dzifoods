@@ -22,7 +22,7 @@ export const metadata = buildMetadata({
 const QUICK_LINKS = [
   { label: "Book a table", href: "/reservations", description: "Tables open 90 days ahead" },
   { label: "Order online", href: "/order", description: "Delivery across central Accra" },
-  { label: "Private dining", href: "/private-dining", description: "Four rooms, doors closed" },
+  { label: "Events", href: "/events", description: "Tastings, music, chef's tables" },
   { label: "Contact us", href: "/contact", description: "We reply within one working day" },
 ] as const;
 

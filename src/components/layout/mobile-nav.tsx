@@ -21,7 +21,6 @@ const PRIMARY_LINKS = [
   { label: "Reservations", href: "/reservations" },
   { label: "Order online", href: "/order" },
   { label: "Our story", href: "/about" },
-  { label: "Private dining", href: "/private-dining" },
   { label: "Events", href: "/events" },
   { label: "Gallery", href: "/gallery" },
   { label: "Guest stories", href: "/testimonials" },

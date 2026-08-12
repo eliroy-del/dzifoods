@@ -228,7 +228,7 @@ export const FAQS: readonly FaqItem[] = [
     topic: "Events",
     question: "How do I book a private room?",
     answer:
-      "Send an enquiry through the private dining page with your date and headcount. Our events coordinator replies within one working day with a room recommendation, draft menus and a full cost — no obligation, no deposit until you are happy.",
+      "Send an enquiry through the contact page with your date and headcount. Our events coordinator replies within one working day with a recommendation, draft menus and a full cost — no obligation, no deposit until you are happy.",
   },
   {
     id: "faq-events-minimum",

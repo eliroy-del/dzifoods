@@ -213,10 +213,10 @@ export function ReservationForm({ defaults }: ReservationFormProps) {
           ) : null}
           <p className="text-muted-foreground mt-4 text-xs">
             Thirteen or more?{" "}
-            <Link href="/private-dining" className="text-accent link-underline">
-              Private dining
+            <Link href="/contact?topic=events" className="text-accent link-underline">
+              Contact our events team
             </Link>{" "}
-            handles parties up to two hundred.
+            for larger parties.
           </p>
         </fieldset>
 
@@ -491,8 +491,8 @@ export function ReservationForm({ defaults }: ReservationFormProps) {
 
           {tooLarge ? (
             <p className="border-gold/30 bg-gold/8 text-muted-foreground mt-6 rounded-2xl border px-4 py-3 text-xs leading-relaxed">
-              For a party this size our private dining team will look after you properly.{" "}
-              <Link href="/private-dining" className="text-gold link-underline">
+              For a party this size our events team will look after you properly.{" "}
+              <Link href="/contact?topic=events" className="text-gold link-underline">
                 Enquire here
               </Link>
               .

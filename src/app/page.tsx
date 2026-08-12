@@ -9,7 +9,6 @@ import { Hero } from "@/components/sections/hero";
 import { InstagramFeed } from "@/components/sections/instagram";
 import { Loyalty } from "@/components/sections/loyalty";
 import { MenuPreview } from "@/components/sections/menu-preview";
-import { PrivateDiningPreview } from "@/components/sections/private-dining-preview";
 import { Process } from "@/components/sections/process";
 import { Testimonials } from "@/components/sections/testimonials";
 import { WhyChoose } from "@/components/sections/why-choose";
@@ -32,7 +31,6 @@ export default function HomePage() {
       <FeaturedDishes />
       <ChefSection />
       <Process />
-      <PrivateDiningPreview />
       <EventsPreview />
       <WhyChoose />
       <Testimonials />
