@@ -4,7 +4,6 @@ import { CallToAction } from "@/components/sections/cta";
 import { ChefSection } from "@/components/sections/chef";
 import { EventsPreview } from "@/components/sections/events-preview";
 import { FeaturedDishes } from "@/components/sections/featured-dishes";
-import { Features } from "@/components/sections/features";
 import { GalleryPreview } from "@/components/sections/gallery-preview";
 import { Hero } from "@/components/sections/hero";
 import { InstagramFeed } from "@/components/sections/instagram";
@@ -28,7 +27,6 @@ export default function HomePage() {
     <>
       <JsonLd id="schema-home" data={[menuSchema(), reviewsSchema()]} />
       <Hero />
-      <Features />
       <AboutPreview />
       <MenuPreview />
       <FeaturedDishes />
