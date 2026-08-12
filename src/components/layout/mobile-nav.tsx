@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { Logo } from "@/components/layout/logo";
-import { LocaleCurrencySwitcher } from "@/components/layout/locale-currency";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/primitives";
