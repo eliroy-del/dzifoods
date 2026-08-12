@@ -11,7 +11,6 @@ import { Button } from "@/components/ui/button";
 import { ImageFrame } from "@/components/ui/media";
 import { Marquee } from "@/components/ui/section";
 import { POPULAR_DISHES } from "@/constants/menu";
-import { SITE } from "@/constants/site";
 import { cn } from "@/lib/utils";
 
 /**
@@ -93,17 +92,6 @@ export function Hero() {
               </Button>
             </motion.div>
 
-            <motion.dl
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1.05 }}
-              className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-5"
-            >
-              <Stat value={`${SITE.rating.value}★`} label={`${(SITE.rating.count / 1000).toFixed(1)}k reviews`} />
-              <Stat value="480k+" label="Guests served" />
-              <Stat value="27" label="Awards won" />
-              <Stat value="12 yrs" label="On Senchi Link" />
-            </motion.dl>
           </div>
 
           <motion.div
@@ -148,19 +136,5 @@ export function Hero() {
         </div>
       ) : null}
     </section>
-  );
-}
-
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div>
-      <dt className="sr-only">{label}</dt>
-      <dd>
-        <span className="font-display block text-2xl font-medium text-white">{value}</span>
-        <span className="font-ui mt-0.5 block text-[0.65rem] tracking-[0.18em] text-white/45 uppercase">
-          {label}
-        </span>
-      </dd>
-    </div>
   );
 }
