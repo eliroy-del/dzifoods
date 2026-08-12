@@ -93,23 +93,6 @@ export function AboutPreview({ className }: { className?: string }) {
             </Reveal>
           </div>
         </div>
-
-        <Stagger
-          className="border-border mt-20 grid gap-10 border-t pt-12 sm:grid-cols-2 lg:grid-cols-4"
-          gap={0.1}
-        >
-          {STATS.map((stat) => (
-            <StaggerItem key={stat.id}>
-              <p className="font-display text-gradient-ember text-5xl leading-none font-medium md:text-6xl">
-                <CountUp to={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
-              </p>
-              <p className="font-ui mt-4 text-sm font-semibold tracking-[0.08em] uppercase">
-                {stat.label}
-              </p>
-              <p className="text-muted-foreground mt-2 text-sm leading-relaxed">{stat.description}</p>
-            </StaggerItem>
-          ))}
-        </Stagger>
       </div>
     </section>
   );
