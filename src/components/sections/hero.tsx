@@ -1,29 +1,26 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, MousePointer2, Star, UtensilsCrossed } from "lucide-react";
+import { ArrowRight, MousePointer2, UtensilsCrossed } from "lucide-react";
 import Link from "next/link";
 
 import { Embers } from "@/components/motion/interactions";
 import { TextReveal } from "@/components/motion/reveal";
 import { ReservationWidget } from "@/components/reservation/reservation-widget";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ImageFrame } from "@/components/ui/media";
 import { Marquee } from "@/components/ui/section";
 import { POPULAR_DISHES } from "@/constants/menu";
 import { SITE } from "@/constants/site";
-import { useOpeningStatus } from "@/hooks";
 import { cn } from "@/lib/utils";
 
 /**
  * The three-second sell.
  *
  * A full-bleed live-fire photograph, a slow ken-burns drift, drifting embers and
- * one decision to make: reserve, or order. Everything else is trust signal.
+ * one decision to make: reserve, or order.
  */
 export function Hero() {
-  const status = useOpeningStatus();
   const reduceMotion = useReducedMotion();
 
   return (
@@ -53,33 +50,9 @@ export function Hero() {
       <div className="container-luxe relative z-2">
         <div className="grid items-end gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
           <div className="max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-wrap items-center gap-3"
-            >
-              <Badge variant="glass" size="md">
-                <Star className="text-gold size-3" fill="currentColor" aria-hidden />
-                {SITE.awards[0]}
-              </Badge>
-              {status ? (
-                <Badge variant="glass" size="md">
-                  <span
-                    aria-hidden
-                    className={cn(
-                      "size-1.5 rounded-full",
-                      status.isOpen ? "bg-success animate-pulse" : "bg-white/50",
-                    )}
-                  />
-                  {status.label}
-                </Badge>
-              ) : null}
-            </motion.div>
-
             <h1
               id="hero-heading"
-              className="mt-7 text-[clamp(2.6rem,7vw,5.4rem)] leading-[0.98] font-medium text-white"
+              className="text-[clamp(2.6rem,7vw,5.4rem)] leading-[0.98] font-medium text-white"
             >
               <TextReveal text="Experience dining" as="span" className="block" />
               <TextReveal
