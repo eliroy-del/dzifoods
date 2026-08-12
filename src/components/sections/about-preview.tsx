@@ -2,7 +2,7 @@ import { ArrowRight, Quote } from "lucide-react";
 import Link from "next/link";
 
 import { Parallax } from "@/components/motion/parallax";
-import { Reveal } from "@/components/motion/reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 import { ImageFrame } from "@/components/ui/media";
 import { Eyebrow } from "@/components/ui/section";
