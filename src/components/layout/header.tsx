@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown, Phone, Star } from "lucide-react";
+import { ChevronDown, Phone } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -12,15 +12,12 @@ import { MobileNav } from "@/components/layout/mobile-nav";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { CartButton } from "@/components/order/cart-button";
 import { Button } from "@/components/ui/button";
-import { CONTACT, NAV_ITEMS, SITE } from "@/constants/site";
-import { useOpeningStatus, useScrollState } from "@/hooks";
+import { CONTACT, NAV_ITEMS } from "@/constants/site";
+import { useScrollState } from "@/hooks";
 import { cn } from "@/lib/utils";
 
 /**
  * Sticky header: transparent over the hero, frosted and solid once scrolled.
- *
- * The announcement bar and the nav bar live inside one fixed wrapper so a
- * single transform can hide both when the guest scrolls down.
  */
 export function Header() {
   const pathname = usePathname();
@@ -69,8 +66,6 @@ export function Header() {
         )}
         onMouseLeave={scheduleClose}
       >
-        <AnnouncementBar collapsed={scrolled} />
-
         <header
           data-overlay={overlay || undefined}
           className={cn(
@@ -161,43 +156,5 @@ export function Header() {
         </header>
       </div>
     </>
-  );
-}
-
-/** Trust signals and today's hours, collapsed away as soon as you scroll. */
-function AnnouncementBar({ collapsed }: { collapsed: boolean }) {
-  const status = useOpeningStatus();
-
-  return (
-    <div
-      className={cn(
-        "bg-forest-deep text-cream/80 hidden overflow-hidden transition-[height,opacity] duration-500 ease-[var(--ease-luxe)] lg:block",
-        collapsed ? "h-0 opacity-0" : "h-9 opacity-100",
-      )}
-    >
-      <div className="container-luxe flex h-9 items-center justify-between text-[0.7rem]">
-        <p className="font-ui flex items-center gap-2 tracking-[0.14em] uppercase">
-          <Star className="text-gold size-3" fill="currentColor" aria-hidden />
-          {SITE.rating.value} from {SITE.rating.count.toLocaleString("en-US")} guests
-        </p>
-        <div className="font-ui flex items-center gap-6 tracking-[0.14em] uppercase">
-          {status ? (
-            <span className="flex items-center gap-2">
-              <span
-                aria-hidden
-                className={cn(
-                  "size-1.5 rounded-full",
-                  status.isOpen ? "bg-success animate-pulse" : "bg-muted-foreground",
-                )}
-              />
-              {status.label}
-            </span>
-          ) : null}
-          <span className="hidden xl:inline">
-            {CONTACT.address.district}, {CONTACT.address.city}
-          </span>
-        </div>
-      </div>
-    </div>
   );
 }
