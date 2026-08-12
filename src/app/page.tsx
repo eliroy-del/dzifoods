@@ -1,6 +1,5 @@
 import { JsonLd } from "@/components/seo/json-ld";
 import { CallToAction } from "@/components/sections/cta";
-import { ChefSection } from "@/components/sections/chef";
 import { EventsPreview } from "@/components/sections/events-preview";
 import { GalleryPreview } from "@/components/sections/gallery-preview";
 import { Hero } from "@/components/sections/hero";
@@ -25,7 +24,6 @@ export default function HomePage() {
       <JsonLd id="schema-home" data={[menuSchema(), reviewsSchema()]} />
       <Hero />
       <MenuPreview />
-      <ChefSection />
       <Process />
       <EventsPreview />
       <WhyChoose />
