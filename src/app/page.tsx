@@ -1,7 +1,6 @@
 import { JsonLd } from "@/components/seo/json-ld";
 import { CallToAction } from "@/components/sections/cta";
 import { Hero } from "@/components/sections/hero";
-import { InstagramFeed } from "@/components/sections/instagram";
 import { MenuPreview } from "@/components/sections/menu-preview";
 import { Testimonials } from "@/components/sections/testimonials";
 import { menuSchema, reviewsSchema } from "@/lib/schema";
@@ -20,7 +19,6 @@ export default function HomePage() {
       <Hero />
       <MenuPreview />
       <Testimonials />
-      <InstagramFeed />
       <CallToAction />
     </>
   );
