@@ -1,6 +1,5 @@
 import { JsonLd } from "@/components/seo/json-ld";
 import { CallToAction } from "@/components/sections/cta";
-import { GalleryPreview } from "@/components/sections/gallery-preview";
 import { Hero } from "@/components/sections/hero";
 import { InstagramFeed } from "@/components/sections/instagram";
 import { Loyalty } from "@/components/sections/loyalty";
@@ -22,7 +21,6 @@ export default function HomePage() {
       <Hero />
       <MenuPreview />
       <Testimonials />
-      <GalleryPreview />
       <Loyalty />
       <InstagramFeed />
       <CallToAction />
