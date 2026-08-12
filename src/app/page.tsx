@@ -6,7 +6,6 @@ import { InstagramFeed } from "@/components/sections/instagram";
 import { Loyalty } from "@/components/sections/loyalty";
 import { MenuPreview } from "@/components/sections/menu-preview";
 import { Testimonials } from "@/components/sections/testimonials";
-import { WhyChoose } from "@/components/sections/why-choose";
 import { menuSchema, reviewsSchema } from "@/lib/schema";
 
 /**
@@ -22,7 +21,6 @@ export default function HomePage() {
       <JsonLd id="schema-home" data={[menuSchema(), reviewsSchema()]} />
       <Hero />
       <MenuPreview />
-      <WhyChoose />
       <Testimonials />
       <GalleryPreview />
       <Loyalty />
