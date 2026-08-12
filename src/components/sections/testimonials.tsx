@@ -10,9 +10,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Stars } from "@/components/ui/rating";
 import { SectionHeading } from "@/components/ui/section";
-import { PRESS_QUOTES, TESTIMONIALS } from "@/constants/people";
+import { TESTIMONIALS } from "@/constants/people";
 import { SITE } from "@/constants/site";
-import { Marquee } from "@/components/ui/section";
 import { cn, formatDate } from "@/lib/utils";
 
 /**
