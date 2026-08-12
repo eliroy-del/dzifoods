@@ -158,22 +158,6 @@ export function Testimonials({ className }: { className?: string }) {
             />
           ))}
         </div>
-
-        <div className="mt-16 border-t border-white/10 pt-10">
-          <Marquee speed={34}>
-            {PRESS_QUOTES.map((entry) => (
-              <span key={entry.source} className="flex items-center gap-5 px-8">
-                <span className="font-display text-cream/70 text-lg whitespace-nowrap italic">
-                  &ldquo;{entry.quote}&rdquo;
-                </span>
-                <span className="font-ui text-gold text-[0.62rem] tracking-[0.22em] whitespace-nowrap uppercase">
-                  {entry.source}
-                </span>
-                <span aria-hidden className="bg-accent/60 size-1 rotate-45" />
-              </span>
-            ))}
-          </Marquee>
-        </div>
       </div>
     </section>
   );
