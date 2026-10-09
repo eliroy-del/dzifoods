@@ -16,21 +16,21 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Menus",
   description:
-    "Explore every DZIFOODS menu — live-fire grill, dry-aged steak, Tema seafood, West African classics, pastry and a 420-label cellar. Filter by diet, heat and price.",
+    "Weekday plates, weekend soups and pre-order specials at DZIFOODS — banku, fufu, kenkey, akple and more. Filter by diet, heat and price.",
   path: "/menu",
-  image: "/images/dish-steak.webp",
+  image: "/images/dish-jollof.webp",
   keywords: [
-    "Accra fine dining menu",
-    "Afro-fusion restaurant menu",
-    "dry-aged steak Accra",
-    "jollof fine dining",
-    "vegan menu Accra",
+    "DZIFOODS menu Accra",
+    "Ghanaian restaurant menu",
+    "banku and tilapia Accra",
+    "fufu Accra",
+    "weekend soup Accra",
   ],
 });
 
 const CREDENTIALS = [
   { label: "Dishes on the menu", value: `${DISHES.length}` },
-  { label: "Wine labels", value: "420" },
+  { label: "Menus", value: "3" },
   { label: "Guest rating", value: `${SITE.rating.value} / 5` },
 ];
 
@@ -57,10 +57,10 @@ export default async function MenuPage({ searchParams }: MenuPageProps) {
 
       <PageHero
         eyebrow="The menus"
-        title="Everything here has a reason to be here."
-        description="Nothing arrives on this list without earning it. Menus shift with the market and the season, so what you read today is what the kitchen believes in today."
-        image="/images/dish-steak.webp"
-        imageAlt="A dry-aged tomahawk steak resting under herb butter beside charred rosemary"
+        title="Weekdays, weekends, and dishes cooked to order."
+        description="Banku, fufu, kenkey, akple and more — plates the kitchen cooks every day, plus weekend soups and pre-order specials."
+        image="/images/dish-jollof.webp"
+        imageAlt="A plated Ghanaian rice dish at DZIFOODS"
         crumbs={[
           { label: "Home", href: "/" },
           { label: "Menus", href: "/menu" },

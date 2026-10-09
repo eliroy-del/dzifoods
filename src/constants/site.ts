@@ -166,41 +166,22 @@ export const NAV_ITEMS: readonly NavItem[] = [
     mega: {
       columns: [
         {
-          title: "All day",
+          title: "Menus",
           links: [
-            { label: "Breakfast", href: "/menu?category=breakfast", description: "From 07:30, daily" },
-            { label: "Lunch", href: "/menu?category=lunch", description: "Two courses in under an hour" },
-            { label: "Dinner", href: "/menu?category=dinner", description: "The full tasting experience" },
-            { label: "Weekend brunch", href: "/events", description: "Bottomless, with a live trio" },
-          ],
-        },
-        {
-          title: "From the fire",
-          links: [
-            { label: "Grill & smoke", href: "/menu?category=grill", description: "Charcoal, wood, patience" },
-            { label: "Dry-aged steak", href: "/menu?category=steak", description: "45-day aged, cut to order" },
-            { label: "Seafood", href: "/menu?category=seafood", description: "Landed at Tema each morning" },
-            { label: "Local classics", href: "/menu?category=local", description: "Our grandmothers' recipes" },
-          ],
-        },
-        {
-          title: "The bar",
-          links: [
-            { label: "Signature cocktails", href: "/menu?category=cocktails", description: "Smoke, bitters, botanicals" },
-            { label: "Wine cellar", href: "/menu?category=wine", description: "420 labels, 18 by the glass" },
-            { label: "Zero proof", href: "/menu?category=mocktails", description: "Every bit as considered" },
-            { label: "Coffee & pastry", href: "/menu?category=coffee", description: "Single-origin, roasted weekly" },
+            { label: "Weekdays", href: "/menu?category=weekdays", description: "Monday to Friday favourites" },
+            { label: "Weekend", href: "/menu?category=weekend", description: "Saturday and Sunday soups" },
+            { label: "Pre-Order", href: "/menu?category=pre-order", description: "Call ahead for specials" },
+            { label: "Full menu", href: "/menu", description: "Everything we cook" },
           ],
         },
       ],
       feature: {
-        eyebrow: "Chef's table",
-        title: "The Seven Fires Tasting",
-        description:
-          "Seven courses cooked entirely over live flame, paired glass by glass with our sommelier.",
-        image: "/images/kitchen-pass.webp",
-        href: "/reservations?seating=chefs-counter",
-        cta: "Reserve the counter",
+        eyebrow: "Weekend favourite",
+        title: "Fufu with Goat Light Soup",
+        description: "Pound fufu with fragrant goat light soup — ginger, garlic and garden eggs.",
+        image: "/images/dish-suya.webp",
+        href: "/menu?category=weekend",
+        cta: "See weekend menu",
       },
     },
   },

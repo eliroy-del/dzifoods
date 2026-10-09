@@ -10,18 +10,10 @@ import { cn } from "@/lib/utils";
 import type { MenuCategoryId } from "@/types";
 
 /** Categories surfaced on the home page — the full list lives on /menu. */
-const PREVIEW_CATEGORIES: readonly MenuCategoryId[] = [
-  "starters",
-  "seafood",
-  "steak",
-  "local",
-  "pasta",
-  "desserts",
-  "cocktails",
-];
+const PREVIEW_CATEGORIES: readonly MenuCategoryId[] = ["weekdays", "weekend", "pre-order"];
 
 export function MenuPreview({ className }: { className?: string }) {
-  const [active, setActive] = useState<MenuCategoryId>("starters");
+  const [active, setActive] = useState<MenuCategoryId>("weekdays");
 
   return (
     <section id="menu-preview" className={cn("section relative", className)}>

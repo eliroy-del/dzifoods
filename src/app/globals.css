@@ -10,73 +10,73 @@
    ========================================================================== */
 
 :root {
-  /* Immutable brand palette — sampled from the official DZIFOODS badge */
-  --brand-forest: #185323;
-  --brand-forest-deep: #0c3014;
-  --brand-forest-soft: #3a6c44;
-  --brand-lime: #83b16b;
-  --brand-charcoal: #0e1410;
-  --brand-ember: #ba2e1b;
-  --brand-ember-soft: #d4442e;
-  --brand-gold: #ecb751;
-  --brand-cream: #f4f7ef;
-  --brand-bone: #f7faf4;
+  /* Immutable brand palette — sampled from the official DZIFOODS wordmark */
+  --brand-forest: #1a0b2e;
+  --brand-forest-deep: #0a0608;
+  --brand-forest-soft: #403050;
+  --brand-lime: #f0d058;
+  --brand-charcoal: #13090b;
+  --brand-ember: #e86020;
+  --brand-ember-soft: #f07030;
+  --brand-gold: #efcd5b;
+  --brand-cream: #fff8e8;
+  --brand-bone: #fffdf6;
 
-  /* Light ("Daylight") theme — soft green-tinted paper */
-  --background: #f7faf4;
-  --foreground: #0e1410;
-  --surface: #f0f5eb;
-  --surface-2: #e4ecdf;
+  /* Light ("Daylight") theme — warm paper with orange accents */
+  --background: #fffdf6;
+  --foreground: #13090b;
+  --surface: #fff8e8;
+  --surface-2: #f5ebd2;
   --card: #ffffff;
-  --card-foreground: #0e1410;
+  --card-foreground: #13090b;
   --popover: #ffffff;
-  --popover-foreground: #0e1410;
-  --muted: #e8f0e4;
-  --muted-foreground: #546055;
-  --border: #d2ddce;
-  --input: #c5d3c0;
-  --ring: #ba2e1b;
-  --primary: #185323;
-  --primary-foreground: #f4f7ef;
-  --secondary: #0e1410;
-  --secondary-foreground: #f4f7ef;
-  --accent: #ba2e1b;
+  --popover-foreground: #13090b;
+  --muted: #f3e9d4;
+  --muted-foreground: #6b5a48;
+  --border: #e4d5b8;
+  --input: #d9c8a6;
+  --ring: #e86020;
+  --primary: #1a0b2e;
+  --primary-foreground: #fff8e8;
+  --secondary: #13090b;
+  --secondary-foreground: #fff8e8;
+  --accent: #e86020;
   --accent-foreground: #fff8f5;
-  --gold: #c9942e;
-  --gold-foreground: #0e1410;
+  --gold: #c9a02e;
+  --gold-foreground: #13090b;
   --success: #2f8f3c;
-  --destructive: #ba2e1b;
-  --overlay: 12 18 12;
+  --destructive: #c43a18;
+  --overlay: 19 9 11;
 
   --radius: 0.875rem;
 }
 
 .dark {
-  /* Dark ("Candlelight") theme — deep forest night, the default experience */
-  --background: #08110c;
-  --foreground: #f0f5eb;
-  --surface: #0f1a13;
-  --surface-2: #152219;
-  --card: #121f16;
-  --card-foreground: #f0f5eb;
-  --popover: #0e1912;
-  --popover-foreground: #f0f5eb;
-  --muted: #1a2a1f;
-  --muted-foreground: #9aaf9d;
-  --border: #24362a;
-  --input: #2c4133;
-  --ring: #d4442e;
-  --primary: #3a6c44;
-  --primary-foreground: #f2fff5;
-  --secondary: #f0f5eb;
-  --secondary-foreground: #0e1410;
-  --accent: #d4442e;
+  /* Dark theme — black night with logo yellow & orange (default) */
+  --background: #0a0608;
+  --foreground: #fff8e8;
+  --surface: #13090b;
+  --surface-2: #1a1014;
+  --card: #16101a;
+  --card-foreground: #fff8e8;
+  --popover: #120c14;
+  --popover-foreground: #fff8e8;
+  --muted: #22182a;
+  --muted-foreground: #b5a890;
+  --border: #34283c;
+  --input: #3e3048;
+  --ring: #f07030;
+  --primary: #e86020;
+  --primary-foreground: #fff8f5;
+  --secondary: #fff8e8;
+  --secondary-foreground: #13090b;
+  --accent: #e86020;
   --accent-foreground: #fff8f5;
-  --gold: #ecb751;
-  --gold-foreground: #0e1410;
+  --gold: #efcd5b;
+  --gold-foreground: #13090b;
   --success: #5cb86a;
-  --destructive: #e85a45;
-  --overlay: 4 8 5;
+  --destructive: #f07030;
+  --overlay: 5 3 4;
 }
 
 @theme inline {
@@ -127,8 +127,8 @@
 
   --shadow-card: 0 1px 2px rgb(0 0 0 / 0.06), 0 8px 30px -12px rgb(0 0 0 / 0.25);
   --shadow-lift: 0 24px 60px -20px rgb(0 0 0 / 0.45);
-  --shadow-luxe: 0 40px 120px -40px rgb(24 83 35 / 0.55);
-  --shadow-glow: 0 0 0 1px rgb(186 46 27 / 0.35), 0 12px 45px -10px rgb(186 46 27 / 0.45);
+  --shadow-luxe: 0 40px 120px -40px rgb(26 11 46 / 0.55);
+  --shadow-glow: 0 0 0 1px rgb(232 96 32 / 0.35), 0 12px 45px -10px rgb(232 96 32 / 0.45);
 
   --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
 
@@ -351,7 +351,7 @@ html.lenis body {
 }
 
 @utility glass-dark {
-  background: rgb(8 17 12 / 0.58);
+  background: rgb(10 6 8 / 0.62);
   backdrop-filter: blur(22px) saturate(150%);
   -webkit-backdrop-filter: blur(22px) saturate(150%);
   border: 1px solid rgb(255 255 255 / 0.1);
@@ -361,9 +361,9 @@ html.lenis body {
   background-image: linear-gradient(
     100deg,
     var(--brand-gold) 0%,
-    #f7e3a2 38%,
+    #fff1a8 38%,
     var(--brand-gold) 62%,
-    #b8862a 100%
+    #c9a02e 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -371,7 +371,7 @@ html.lenis body {
 }
 
 @utility text-gradient-ember {
-  background-image: linear-gradient(100deg, #f9a984 0%, var(--brand-ember) 55%, #691400 100%);
+  background-image: linear-gradient(100deg, #f8a060 0%, var(--brand-ember) 55%, #a83808 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

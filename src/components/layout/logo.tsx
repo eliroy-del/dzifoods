@@ -6,22 +6,25 @@ import { cn } from "@/lib/utils";
 
 interface LogoMarkProps {
   className?: string;
-  size?: number;
+  /** Render height in pixels; width scales with the wordmark aspect ratio. */
+  height?: number;
   priority?: boolean;
 }
 
 /**
- * Official DZIFOODS badge — flame, cutlery, and wordmark on the ribbon.
+ * Official DZIFOODS wordmark — yellow script, orange oval, chef’s hat.
  */
-export function LogoMark({ className, size = 52, priority = false }: LogoMarkProps) {
+export function LogoMark({ className, height = 48, priority = false }: LogoMarkProps) {
+  const width = Math.round(height * (932 / 399));
+
   return (
     <Image
       src="/images/logo.png"
       alt=""
-      width={size}
-      height={size}
+      width={width}
+      height={height}
       priority={priority}
-      className={cn("size-[3.25rem] object-contain", className)}
+      className={cn("h-12 w-auto object-contain", className)}
       aria-hidden
     />
   );
@@ -33,7 +36,7 @@ interface LogoProps {
   tone?: "auto" | "light";
   showTagline?: boolean;
   href?: string;
-  /** Show the text wordmark beside the badge (badge already includes the name). */
+  /** Show the text wordmark beside the badge (logo already includes the name). */
   showWordmark?: boolean;
   priority?: boolean;
 }
@@ -58,9 +61,7 @@ export function Logo({
     >
       <LogoMark
         priority={priority}
-        className={cn(
-          "drop-shadow-sm transition-transform duration-700 ease-[var(--ease-luxe)] group-hover/logo:rotate-6",
-        )}
+        className={cn("drop-shadow-sm transition-transform duration-500 ease-[var(--ease-luxe)] group-hover/logo:scale-[1.03]")}
       />
       {showWordmark || showTagline ? (
         <span className="flex flex-col leading-none">

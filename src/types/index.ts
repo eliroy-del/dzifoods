@@ -42,26 +42,9 @@ export interface Locale {
 /*                                    Menu                                    */
 /* -------------------------------------------------------------------------- */
 
-export type MenuCategoryId =
-  | "starters"
-  | "breakfast"
-  | "lunch"
-  | "dinner"
-  | "seafood"
-  | "grill"
-  | "steak"
-  | "pizza"
-  | "pasta"
-  | "rice"
-  | "local"
-  | "desserts"
-  | "drinks"
-  | "cocktails"
-  | "wine"
-  | "mocktails"
-  | "coffee";
+export type MenuCategoryId = "weekdays" | "weekend" | "pre-order";
 
-export type MenuGroupId = "kitchen" | "fire" | "roots" | "sweet" | "bar";
+export type MenuGroupId = "service";
 
 export interface MenuCategory {
   readonly id: MenuCategoryId;
