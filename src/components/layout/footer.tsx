@@ -2,10 +2,8 @@ import { ArrowUpRight, MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
 
 import { Logo } from "@/components/layout/logo";
-import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { resolveBrandIcon } from "@/components/ui/brand-icons";
 import { Ornament, Separator } from "@/components/ui/primitives";
-import { NEWSLETTER } from "@/constants/content";
 import { CONTACT, FOOTER_NAV, SITE, SOCIALS } from "@/constants/site";
 import { getGroupedHours } from "@/lib/hours";
 
@@ -24,21 +22,7 @@ export function Footer() {
         <div className="grid gap-14 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
           <div>
             <Logo tone="light" showTagline />
-            <p className="font-display mt-7 max-w-md text-2xl leading-snug text-white md:text-3xl">
-              {NEWSLETTER.heading}
-            </p>
-            <p className="mt-4 max-w-md text-sm leading-relaxed">{NEWSLETTER.description}</p>
-
-            <NewsletterForm className="mt-7 max-w-md" />
-
-            <ul className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs">
-              {NEWSLETTER.benefits.map((benefit) => (
-                <li key={benefit} className="flex items-center gap-2">
-                  <span aria-hidden className="bg-gold/70 size-1 rotate-45" />
-                  {benefit}
-                </li>
-              ))}
-            </ul>
+            <p className="mt-7 max-w-md text-sm leading-relaxed">{SITE.shortDescription}</p>
           </div>
 
           <div className="grid gap-10 sm:grid-cols-3">
@@ -136,9 +120,7 @@ export function Footer() {
                 );
               })}
             </ul>
-            <p className="mt-5 text-xs leading-relaxed">
-              {CONTACT.parking}
-            </p>
+            <p className="mt-5 text-xs leading-relaxed">{CONTACT.parking}</p>
             <a
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT.mapQuery)}`}
               target="_blank"
