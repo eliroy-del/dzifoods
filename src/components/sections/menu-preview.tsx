@@ -37,14 +37,14 @@ export function MenuPreview({ className }: { className?: string }) {
 
           {PREVIEW_CATEGORIES.map((id) => {
             const category = MENU_CATEGORIES.find((entry) => entry.id === id)!;
-            const dishes = DISHES.filter((dish) => dish.category === id).slice(0, 3);
+            const dishes = DISHES.filter((dish) => dish.category === id).slice(0, 4);
 
             return (
               <TabsContent key={id} value={id} className="mt-10">
                 <p className="font-display text-muted-foreground mb-8 text-xl italic">
                   {category.tagline}
                 </p>
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                   {dishes.map((dish) => (
                     <DishCard key={dish.id} dish={dish} />
                   ))}
