@@ -6,7 +6,6 @@ import { useDeferredValue, useMemo, useState } from "react";
 import { DishCard } from "@/components/menu/dish-card";
 import { Stagger, StaggerItem } from "@/components/motion/reveal";
 import { useFavourites } from "@/components/providers/cart-provider";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/controls";
 import { Input } from "@/components/ui/field";
