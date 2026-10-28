@@ -36,7 +36,7 @@ export function MenuPreview({ className }: { className?: string }) {
           </Reveal>
 
           {PREVIEW_CATEGORIES.map((id) => {
-            const dishes = DISHES.filter((dish) => dish.category === id).slice(0, 4);
+            const dishes = DISHES.filter((dish) => dish.category === id);
 
             return (
               <TabsContent key={id} value={id} className="mt-10">
