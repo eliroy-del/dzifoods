@@ -17,10 +17,10 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Contact",
   description:
-    "Find DZIFOODS at 12 Senchi Link, Airport Residential, Accra. Call, WhatsApp, email, directions and valet parking — open seven days.",
+    "Find DZIFOODS on the N1 George W. Bush Highway, Akweteyman, Accra. Call, WhatsApp, email and directions — open seven days.",
   path: "/contact",
   image: "/images/interior-dining.webp",
-  keywords: ["DZIFOODS address", "restaurant Airport Residential", "directions DZIFOODS Accra"],
+  keywords: ["DZIFOODS address", "restaurant Akweteyman", "directions DZIFOODS Accra"],
 });
 
 interface ContactPageProps {
@@ -54,9 +54,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
       <PageHero
         eyebrow="Contact"
         title="Find us. Call us. Write to us."
-        description="Two minutes from Kotoka International Airport. Look for the brass door beneath the palms on Senchi Link."
+        description="On the N1 George W. Bush Highway in Akweteyman, Accra."
         image="/images/interior-dining.webp"
-        imageAlt="The entrance to DZIFOODS on Senchi Link"
+        imageAlt="Inside DZIFOODS"
         crumbs={[
           { label: "Home", href: "/" },
           { label: "Contact", href: "/contact" },

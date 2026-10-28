@@ -51,7 +51,7 @@ export default function AccessibilityPage() {
 
         <LegalSection title="The restaurant">
           <ul className="list-disc space-y-2 pl-5">
-            <li>Step-free access from the Senchi Link entrance to the main dining room</li>
+            <li>Step-free access from the entrance to the main dining room</li>
             <li>Accessible restroom on the ground floor</li>
             <li>Staff trained to assist guests with mobility, vision and hearing needs</li>
             <li>Large-print menus available on request</li>

@@ -207,7 +207,7 @@ export const FAQS: readonly FaqItem[] = [
     topic: "Orders & Delivery",
     question: "Where do you deliver?",
     answer:
-      "Within a twelve-kilometre radius of Airport Residential, which covers most of central Accra including Cantonments, Labone, Osu, East Legon, Airport City, Ridge and Dzorwulu. Delivery runs from 11:30 until an hour before close.",
+      "Across Accra from our kitchen in Akweteyman. Call or WhatsApp us to confirm your area. Delivery runs from 11:30 until an hour before close.",
   },
   {
     id: "faq-delivery-time",

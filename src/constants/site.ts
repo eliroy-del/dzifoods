@@ -13,7 +13,7 @@ export const SITE = {
   shortDescription:
     "Afro-fusion fine dining in Accra. Fire, terroir and craft — plated by an award-winning kitchen.",
   description:
-    "DZIFOODS is an award-winning Afro-fusion restaurant in Airport Residential, Accra. Live-fire cooking, West African terroir and a cellar worth lingering over — served in a candlelit room built for celebration.",
+    "DZIFOODS is an award-winning Afro-fusion restaurant in Akweteyman, Accra. Live-fire cooking, West African terroir and a cellar worth lingering over — served in a candlelit room built for celebration.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://dzifoods.com",
   locale: "en_GH",
   founded: "2013",
@@ -38,20 +38,19 @@ export const CONTACT = {
   eventsEmail: "events@dzifoods.com",
   careersEmail: "careers@dzifoods.com",
   address: {
-    street: "12 Senchi Link",
-    district: "Airport Residential Area",
+    street: "N1 George W. Bush Highway",
+    district: "Akweteyman",
     city: "Accra",
     region: "Greater Accra",
-    postalCode: "GA-107-4210",
+    plusCode: "JQ56+FCX",
     country: "Ghana",
     countryCode: "GH",
   },
-  geo: { lat: 5.6045, lng: -0.1748 },
-  mapQuery: "12 Senchi Link, Airport Residential Area, Accra, Ghana",
+  geo: { lat: 5.608747, lng: -0.238893 },
+  mapQuery: "5.608747,-0.238893",
   directions:
-    "Two minutes from Kotoka International Airport, opposite the Senchi Link roundabout. Look for the brass door beneath the palms.",
-  parking:
-    "Complimentary valet from 6pm, plus 40 secured self-park bays on Senchi Link. Ride-hail pickup is signposted at the north gate.",
+    "On the N1 George W. Bush Highway in Akweteyman. Search the plus code JQ56+FCX in Google Maps for the exact spot.",
+  parking: "Collecting an order? Call or WhatsApp us when you arrive and we'll bring it out to you.",
 } as const;
 
 export const SOCIALS = [

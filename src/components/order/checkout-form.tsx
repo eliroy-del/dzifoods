@@ -211,7 +211,7 @@ export function CheckoutForm() {
             <RadioCard
               value="pickup"
               label="Collection"
-              description="Skip the queue at our Senchi Link door — valet will bring it out."
+              description="Collect from us in Akweteyman — we'll bring it out to you."
               meta={ORDER_SETTINGS.pickupEstimate}
               icon={<Store className="size-4" aria-hidden />}
             />
@@ -299,8 +299,8 @@ export function CheckoutForm() {
               </>
             ) : (
               <p className="text-muted-foreground bg-surface/60 border-border sm:col-span-2 rounded-2xl border px-5 py-4 text-sm leading-relaxed">
-                Collect from <span className="text-foreground">12 Senchi Link</span>, Airport
-                Residential. Pull into the valet bay and tell them your reference — we'll bring it
+                Collect from <span className="text-foreground">N1 George W. Bush Highway</span>,
+                Akweteyman. Call or WhatsApp us with your reference when you arrive — we'll bring it
                 out.
               </p>
             )}

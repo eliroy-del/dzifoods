@@ -82,7 +82,7 @@ export const STATS: readonly Stat[] = [
     value: 12,
     suffix: "",
     label: "Years of service",
-    description: "One room on Senchi Link since 2013, never relocated.",
+    description: "One kitchen in Akweteyman since 2013, never relocated.",
   },
   {
     id: "guests",
@@ -113,7 +113,7 @@ export const TIMELINE: readonly TimelineEntry[] = [
     year: "2013",
     title: "A twenty-two seat room",
     description:
-      "Chef Kwame Dzidzor returns from Lyon with a knife roll, a grandmother's recipe book and a lease on Senchi Link. The first menu ran to nine dishes.",
+      "Chef Kwame Dzidzor returns from Lyon with a knife roll, a grandmother's recipe book and a lease in Akweteyman. The first menu ran to nine dishes.",
     image: "/images/kitchen-pass.webp",
   },
   {

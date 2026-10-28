@@ -21,7 +21,7 @@ export const metadata = buildMetadata({
     "Order DZIFOODS across Accra — insulated, tracked delivery in 35–50 minutes, or collect in under 25. Free delivery over ₵450.",
   path: "/order",
   image: "/images/dish-jollof.webp",
-  keywords: ["food delivery Accra", "order jollof Accra", "restaurant delivery Airport Residential"],
+  keywords: ["food delivery Accra", "order jollof Accra", "restaurant delivery Akweteyman"],
 });
 
 const PROMISES = [
@@ -128,8 +128,8 @@ export default function OrderPage() {
               </span>
               <h2 className="font-display mt-6 text-3xl">Collection</h2>
               <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
-                Ready in {ORDER_SETTINGS.pickupEstimate}. Pull into the valet bay at 12 Senchi Link,
-                give your reference, and it comes to the car.
+                Ready in {ORDER_SETTINGS.pickupEstimate}. Collect from us on the N1 George W. Bush
+                Highway, Akweteyman — give your reference and we'll bring it out.
               </p>
               <ul className="mt-7 space-y-3 text-sm">
                 {[

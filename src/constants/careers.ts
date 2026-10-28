@@ -46,7 +46,7 @@ export const JOB_OPENINGS: readonly JobOpening[] = [
     title: "Chef de Partie — Fire Section",
     department: "Kitchen",
     type: "Full-time",
-    location: "Airport Residential, Accra",
+    location: "Akweteyman, Accra",
     summary:
       "Own the hardwood grill across dinner service. You will run the busiest section in the building, and the one guests can see.",
     responsibilities: [
@@ -61,7 +61,7 @@ export const JOB_OPENINGS: readonly JobOpening[] = [
     title: "Commis Pastry Chef",
     department: "Kitchen",
     type: "Full-time",
-    location: "Airport Residential, Accra",
+    location: "Akweteyman, Accra",
     summary:
       "Work directly under Abena on viennoiserie, sorbet and our single-origin chocolate programme. Formal training welcome but not required.",
     responsibilities: [
@@ -76,7 +76,7 @@ export const JOB_OPENINGS: readonly JobOpening[] = [
     title: "Sommelier",
     department: "Bar",
     type: "Full-time",
-    location: "Airport Residential, Accra",
+    location: "Akweteyman, Accra",
     summary:
       "Support Yaw across a 420-label cellar, run Wednesday flights, and help us build the best zero-proof pairing list in the region.",
     responsibilities: [
@@ -91,7 +91,7 @@ export const JOB_OPENINGS: readonly JobOpening[] = [
     title: "Host / Reservations",
     department: "Front of House",
     type: "Full-time",
-    location: "Airport Residential, Accra",
+    location: "Akweteyman, Accra",
     summary:
       "The first voice and first face of the house. You will manage the book, the door and the first thirty seconds of every guest's evening.",
     responsibilities: [
@@ -106,7 +106,7 @@ export const JOB_OPENINGS: readonly JobOpening[] = [
     title: "Bartender",
     department: "Bar",
     type: "Part-time",
-    location: "Airport Residential, Accra",
+    location: "Akweteyman, Accra",
     summary:
       "Four nights a week behind the marble. Classic technique, local botanicals, and a licence to argue about ice.",
     responsibilities: [
@@ -121,7 +121,7 @@ export const JOB_OPENINGS: readonly JobOpening[] = [
     title: "Kitchen Apprenticeship",
     department: "Kitchen",
     type: "Apprenticeship",
-    location: "Airport Residential, Accra",
+    location: "Akweteyman, Accra",
     summary:
       "An eighteen-month paid apprenticeship for four people a year. No experience required — only appetite. Two of our current section chefs started here.",
     responsibilities: [

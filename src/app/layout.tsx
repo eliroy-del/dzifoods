@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "fine dining Accra",
     "best restaurant Accra",
     "Afro-fusion restaurant",
-    "Airport Residential restaurant",
+    "Akweteyman restaurant",
     "private dining Accra",
     "chef's table Ghana",
     "jollof fine dining",

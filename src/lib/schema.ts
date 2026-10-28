@@ -17,7 +17,6 @@ const postalAddress = {
   streetAddress: `${CONTACT.address.street}, ${CONTACT.address.district}`,
   addressLocality: CONTACT.address.city,
   addressRegion: CONTACT.address.region,
-  postalCode: CONTACT.address.postalCode,
   addressCountry: CONTACT.address.countryCode,
 } as const;
 
@@ -60,7 +59,6 @@ export function restaurantSchema() {
       { "@type": "LocationFeatureSpecification", name: "Outdoor seating", value: true },
       { "@type": "LocationFeatureSpecification", name: "Wheelchair accessible", value: true },
       { "@type": "LocationFeatureSpecification", name: "Free Wi-Fi", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Valet parking", value: true },
       { "@type": "LocationFeatureSpecification", name: "Live music", value: true },
     ],
     makesOffer: [
