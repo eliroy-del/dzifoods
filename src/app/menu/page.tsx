@@ -16,7 +16,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Menus",
   description:
-    "Weekday plates, weekend soups and pre-order specials at DZIFOODS — banku, fufu, kenkey, akple and more. Filter by diet, heat and price.",
+    "Weekday plates, weekend soups and pre-order specials at DZIFOODS — banku, fufu, jollof, akple and more. Filter by diet, heat and price.",
   path: "/menu",
   image: "/images/dish-jollof.webp",
   keywords: [
@@ -58,7 +58,7 @@ export default async function MenuPage({ searchParams }: MenuPageProps) {
       <PageHero
         eyebrow="The menus"
         title="Weekdays, weekends, and dishes cooked to order."
-        description="Banku, fufu, kenkey, akple and more — plates the kitchen cooks every day, plus weekend soups and pre-order specials."
+        description="Banku, fufu, jollof, akple and more — plates the kitchen cooks every day, plus weekend soups and pre-order specials."
         image="/images/dish-jollof.webp"
         imageAlt="A plated Ghanaian rice dish at DZIFOODS"
         crumbs={[

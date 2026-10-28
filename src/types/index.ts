@@ -81,6 +81,10 @@ export interface Dish {
   readonly ingredients: readonly string[];
   /** Base price in GHS (minor units are not used — prices are whole cedis). */
   readonly price: number;
+  /** Upper bound when the price varies by size, e.g. ₵80 – ₵120 for tilapia. */
+  readonly priceMax?: number;
+  /** Shown as "From ₵…" when the final price depends on what is added. */
+  readonly priceFrom?: boolean;
   readonly calories: number;
   /** Kitchen preparation time in minutes. */
   readonly prepTime: number;

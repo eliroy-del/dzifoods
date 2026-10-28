@@ -18,7 +18,7 @@ import { ImageFrame, Steam } from "@/components/ui/media";
 import { Separator } from "@/components/ui/primitives";
 import { SpiceMeter, Stars } from "@/components/ui/rating";
 import { getCategory } from "@/constants/menu";
-import { BADGE_META, DIETARY_META } from "@/lib/dish-meta";
+import { BADGE_META, DIETARY_META, dishPriceLabel } from "@/lib/dish-meta";
 import { cn } from "@/lib/utils";
 import type { Dish } from "@/types";
 
@@ -128,7 +128,7 @@ export function DishDialog({ dish, open, onOpenChange }: DishDialogProps) {
             <div className="mt-auto flex items-center justify-between gap-4">
               <div>
                 <p className="text-muted-foreground text-xs">Price</p>
-                <p className="font-display text-3xl font-medium">{price(dish.price)}</p>
+                <p className="font-display text-3xl font-medium">{dishPriceLabel(dish, price)}</p>
               </div>
               <QuantityStepper
                 value={quantity}

@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ImageFrame, Steam } from "@/components/ui/media";
 import { SpiceMeter, Stars } from "@/components/ui/rating";
-import { BADGE_META, DIETARY_META, primaryBadge } from "@/lib/dish-meta";
+import { BADGE_META, DIETARY_META, dishPriceLabel, primaryBadge } from "@/lib/dish-meta";
 import { cn } from "@/lib/utils";
 import type { Dish } from "@/types";
 
@@ -85,7 +85,7 @@ export function DishCard({ dish, variant = "default", priority = false, classNam
                 {dish.description}
               </span>
               <span className="mt-1.5 flex items-center gap-3">
-                <span className="font-ui text-sm font-semibold">{price(dish.price)}</span>
+                <span className="font-ui text-sm font-semibold">{dishPriceLabel(dish, price)}</span>
                 <SpiceMeter level={dish.spice} />
               </span>
             </span>
@@ -157,7 +157,7 @@ export function DishCard({ dish, variant = "default", priority = false, classNam
           {featured ? (
             <div className="pointer-events-none absolute inset-x-6 bottom-5 flex items-end justify-between gap-4">
               <p className="font-display text-2xl leading-tight text-white md:text-3xl">{dish.name}</p>
-              <p className="font-display shrink-0 text-2xl text-white">{price(dish.price)}</p>
+              <p className="font-display shrink-0 text-2xl text-white">{dishPriceLabel(dish, price)}</p>
             </div>
           ) : null}
         </div>
@@ -169,7 +169,7 @@ export function DishCard({ dish, variant = "default", priority = false, classNam
                 {dish.name}
               </h3>
               <p className="font-ui shrink-0 text-base font-semibold tabular-nums">
-                {price(dish.price)}
+                {dishPriceLabel(dish, price)}
               </p>
             </div>
           ) : (

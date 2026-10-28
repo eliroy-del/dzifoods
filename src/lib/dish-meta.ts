@@ -1,5 +1,5 @@
 import type { BadgeProps } from "@/components/ui/badge";
-import type { DietaryTag, DishBadge } from "@/types";
+import type { DietaryTag, Dish, DishBadge } from "@/types";
 
 /** Presentation metadata for dish badges, kept out of the components. */
 export const BADGE_META: Record<
@@ -25,4 +25,11 @@ export const DIETARY_META: Record<DietaryTag, { label: string; short: string }> 
 /** The single most important badge, for tight card layouts. */
 export function primaryBadge(badges: readonly DishBadge[]): DishBadge | undefined {
   return [...badges].sort((a, b) => BADGE_META[a].priority - BADGE_META[b].priority)[0];
+}
+
+/** Display price for a dish — handles ranges ("₵80 – ₵120") and starting prices ("From ₵20"). */
+export function dishPriceLabel(dish: Dish, format: (amount: number) => string): string {
+  if (dish.priceMax) return `${format(dish.price)} – ${format(dish.priceMax)}`;
+  if (dish.priceFrom) return `From ${format(dish.price)}`;
+  return format(dish.price);
 }
