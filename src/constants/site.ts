@@ -28,8 +28,8 @@ export const SITE = {
 } as const;
 
 export const CONTACT = {
-  phone: "+233 30 274 8000",
-  phoneHref: "tel:+233302748000",
+  phone: "+233 55 019 8844",
+  phoneHref: "tel:+233550198844",
   whatsapp: "+233 55 019 8844",
   whatsappHref: "https://wa.me/233550198844",
   whatsappMessage: "Hello DZIFOODS — I'd like to place an order.",
@@ -55,11 +55,9 @@ export const CONTACT = {
 } as const;
 
 export const SOCIALS = [
-  { label: "Instagram", href: "https://instagram.com/dzifoods", icon: "Instagram", handle: "@dzifoods" },
-  { label: "Facebook", href: "https://facebook.com/dzifoods", icon: "Facebook", handle: "/dzifoods" },
-  { label: "X", href: "https://x.com/dzifoods", icon: "Twitter", handle: "@dzifoods" },
-  { label: "YouTube", href: "https://youtube.com/@dzifoods", icon: "Youtube", handle: "@dzifoods" },
-  { label: "TikTok", href: "https://tiktok.com/@dzifoods", icon: "Music2", handle: "@dzifoods" },
+  { label: "Instagram", href: "https://instagram.com/dzifoodsgh", icon: "Instagram", handle: "@dzifoodsgh" },
+  { label: "Facebook", href: "https://facebook.com/dzifoodsgh", icon: "Facebook", handle: "@dzifoodsgh" },
+  { label: "TikTok", href: "https://tiktok.com/@dzifoodsgh", icon: "Music2", handle: "@dzifoodsgh" },
 ] as const;
 
 /**

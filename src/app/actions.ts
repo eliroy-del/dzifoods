@@ -1,5 +1,6 @@
 "use server";
 
+import { CONTACT } from "@/constants/site";
 import { getClientKey, rateLimit } from "@/lib/rate-limit";
 import { createReference } from "@/lib/utils";
 import {
@@ -43,7 +44,7 @@ const TOO_FAST: ActionState = {
 
 const GENERIC_ERROR: ActionState = {
   status: "error",
-  message: "Something went wrong on our side. Please call us on +233 30 274 8000.",
+  message: `Something went wrong on our side. Please call us on ${CONTACT.phone}.`,
 };
 
 /** Bots get a plausible success response so they stop probing. */

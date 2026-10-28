@@ -23,7 +23,7 @@ export function InstagramFeed({ className }: { className?: string }) {
       <div className="container-luxe">
         <Reveal>
           <SectionHeading
-            eyebrow="@dzifoods"
+            eyebrow={instagram.handle}
             title="Follow the fire."
             description="Tag us and you might end up on the wall by the pass. It has happened more than once."
             align="center"
