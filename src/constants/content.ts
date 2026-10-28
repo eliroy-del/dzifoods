@@ -320,23 +320,6 @@ export const LOYALTY = {
   ],
 } as const;
 
-/**
- * Delivery zones offered at checkout. Times are indicative and shown beside the
- * area name so a guest can pick with their eyes open.
- */
-export const DELIVERY_AREAS = [
-  { name: "Airport Residential", time: "20 – 30 min" },
-  { name: "Cantonments", time: "25 – 35 min" },
-  { name: "Labone", time: "25 – 40 min" },
-  { name: "East Legon", time: "30 – 45 min" },
-  { name: "Osu", time: "30 – 45 min" },
-  { name: "Ridge & Roman Ridge", time: "25 – 35 min" },
-  { name: "Dzorwulu", time: "25 – 40 min" },
-  { name: "Labadi & La", time: "35 – 50 min" },
-  { name: "Tesano", time: "40 – 55 min" },
-  { name: "Spintex", time: "45 – 60 min" },
-] as const;
-
 export const NEWSLETTER = {
   eyebrow: "The Sunday Send",
   heading: "One letter a month. Never a mailing list.",

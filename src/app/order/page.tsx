@@ -9,7 +9,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SectionHeading } from "@/components/ui/section";
-import { DELIVERY_AREAS } from "@/constants/content";
 import { FEATURED_DISHES, POPULAR_DISHES } from "@/constants/menu";
 import { COUPONS, ORDER_SETTINGS } from "@/constants/site";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -106,17 +105,6 @@ export default function OrderPage() {
               <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
                 {ORDER_SETTINGS.deliveryRadius}, ridden by our own team. Free above{" "}
                 ₵{ORDER_SETTINGS.freeDeliveryThreshold}, otherwise a flat ₵{ORDER_SETTINGS.deliveryFee}.
-              </p>
-              <dl className="border-border mt-7 divide-y border-t">
-                {DELIVERY_AREAS.slice(0, 6).map((area) => (
-                  <div key={area.name} className="flex items-center justify-between py-2.5 text-sm">
-                    <dt className="text-muted-foreground">{area.name}</dt>
-                    <dd className="font-ui text-xs tracking-[0.06em]">{area.time}</dd>
-                  </div>
-                ))}
-              </dl>
-              <p className="text-muted-foreground mt-4 text-xs">
-                Plus {DELIVERY_AREAS.length - 6} further zones, selectable at checkout.
               </p>
             </Card>
           </Reveal>

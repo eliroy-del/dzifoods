@@ -34,7 +34,6 @@ import {
 import { Field, Honeypot, Input, Select, Textarea } from "@/components/ui/field";
 import { ImageFrame } from "@/components/ui/media";
 import { Separator } from "@/components/ui/primitives";
-import { DELIVERY_AREAS } from "@/constants/content";
 import { ORDER_SETTINGS } from "@/constants/site";
 import { getTimeSlots } from "@/lib/hours";
 import { cn } from "@/lib/utils";
@@ -275,14 +274,12 @@ export function CheckoutForm() {
                   />
                 </Field>
                 <Field label="Neighbourhood" htmlFor="checkout-area" error={errors.area?.message}>
-                  <Select id="checkout-area" aria-invalid={!!errors.area} {...register("area")}>
-                    <option value="">Select an area</option>
-                    {DELIVERY_AREAS.map((area) => (
-                      <option key={area.name} value={area.name}>
-                        {area.name} — {area.time}
-                      </option>
-                    ))}
-                  </Select>
+                  <Input
+                    id="checkout-area"
+                    placeholder="e.g. Akweteyman, Kaneshie"
+                    aria-invalid={!!errors.area}
+                    {...register("area")}
+                  />
                 </Field>
                 <Field
                   label="Rider notes"
