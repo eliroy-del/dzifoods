@@ -28,10 +28,10 @@ export const SITE = {
 } as const;
 
 export const CONTACT = {
-  phone: "+233 55 019 8844",
-  phoneHref: "tel:+233550198844",
-  whatsapp: "+233 55 019 8844",
-  whatsappHref: "https://wa.me/233550198844",
+  phone: "+233 53 932 0259",
+  phoneHref: "tel:+233539320259",
+  whatsapp: "+233 53 932 0259",
+  whatsappHref: "https://wa.me/233539320259",
   whatsappMessage: "Hello DZIFOODS — I'd like to place an order.",
   email: "hello@dzifoods.com",
   reservationsEmail: "hello@dzifoods.com",
