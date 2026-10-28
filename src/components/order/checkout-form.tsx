@@ -171,9 +171,9 @@ export function CheckoutForm() {
         <span className="border-border text-muted-foreground mx-auto grid size-16 place-items-center rounded-full border">
           <ShoppingBag className="size-6" aria-hidden />
         </span>
-        <h2 className="font-display mt-6 text-2xl">There's nothing to check out yet</h2>
+        <h2 className="font-display mt-6 text-2xl">There’s nothing to check out yet</h2>
         <p className="text-muted-foreground mx-auto mt-3 max-w-md text-sm">
-          Add a few dishes and we'll hold your place in the queue. Delivery covers{" "}
+          Add a few dishes and we’ll hold your place in the queue. Delivery covers{" "}
           {ORDER_SETTINGS.deliveryRadius}.
         </p>
         <Button asChild variant="ember" size="lg" uppercase className="mt-8">
@@ -297,7 +297,7 @@ export function CheckoutForm() {
             ) : (
               <p className="text-muted-foreground bg-surface/60 border-border sm:col-span-2 rounded-2xl border px-5 py-4 text-sm leading-relaxed">
                 Collect from <span className="text-foreground">N1 George W. Bush Highway</span>,
-                Akweteyman. Call or WhatsApp us with your reference when you arrive — we'll bring it
+                Akweteyman. Call or WhatsApp us with your reference when you arrive — we’ll bring it
                 out.
               </p>
             )}

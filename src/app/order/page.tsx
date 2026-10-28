@@ -117,7 +117,7 @@ export default function OrderPage() {
               <h2 className="font-display mt-6 text-3xl">Collection</h2>
               <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
                 Ready in {ORDER_SETTINGS.pickupEstimate}. Collect from us on the N1 George W. Bush
-                Highway, Akweteyman — give your reference and we'll bring it out.
+                Highway, Akweteyman — give your reference and we’ll bring it out.
               </p>
               <ul className="mt-7 space-y-3 text-sm">
                 {[
@@ -208,7 +208,7 @@ export default function OrderPage() {
                 </h2>
                 <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
                   Apply any of these in the basket. They stack with free delivery but not with each
-                  other — we'll always keep whichever saves you more.
+                  other — we’ll always keep whichever saves you more.
                 </p>
               </div>
               <ul className="grid gap-3 sm:grid-cols-3 lg:w-[26rem]">
