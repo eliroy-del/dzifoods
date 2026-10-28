@@ -14,14 +14,14 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "FAQ",
   description:
-    "Answers about reservations, dress code, dietary needs, delivery, private dining and gift cards at DZIFOODS — quickly, honestly, without the small print.",
+    "Answers about orders, dress code, dietary needs, delivery, events and gift cards at DZIFOODS — quickly, honestly, without the small print.",
   path: "/faq",
   keywords: ["DZIFOODS FAQ", "restaurant cancellation policy Accra", "delivery area Accra"],
 });
 
 const QUICK_LINKS = [
-  { label: "Book a table", href: "/reservations", description: "Tables open 90 days ahead" },
   { label: "Order online", href: "/order", description: "Delivery across central Accra" },
+  { label: "View menu", href: "/menu", description: "Weekdays, weekend and pre-order" },
   { label: "Events", href: "/events", description: "Tastings, music, chef's tables" },
   { label: "Contact us", href: "/contact", description: "We reply within one working day" },
 ] as const;
@@ -43,7 +43,7 @@ export default function FaqPage() {
       <PageHero
         eyebrow="FAQ"
         title="Answers, quickly."
-        description="Everything we get asked before a first visit — reservations, dress code, dietary needs, delivery, private dining and gift cards. If it's not here, call us."
+        description="Everything we get asked before a first visit — orders, dress code, dietary needs, delivery, events and gift cards. If it's not here, call us."
         image="/images/bar-counter.webp"
         imageAlt="The DZIFOODS bar at night"
         crumbs={[

@@ -12,7 +12,7 @@ import { contactSchema, type ContactValues } from "@/lib/validators";
 
 const TOPICS = [
   { value: "general", label: "General enquiry" },
-  { value: "reservations", label: "Reservations" },
+  { value: "orders", label: "Orders & delivery" },
   { value: "events", label: "Events & large parties" },
   { value: "feedback", label: "Feedback" },
   { value: "press", label: "Press & media" },

@@ -10,7 +10,6 @@ import {
   giftCardSchema,
   newsletterSchema,
   privateDiningSchema,
-  reservationSchema,
   toFieldErrors,
 } from "@/lib/validators";
 import type { ActionState } from "@/types";
@@ -81,29 +80,6 @@ function isHoneypotHit(input: unknown): boolean {
 }
 
 /* -------------------------------------------------------------------------- */
-
-export const submitReservation = guard("reservation", 6, async (input) => {
-  if (isHoneypotHit(input)) return SILENT_SUCCESS;
-
-  const parsed = reservationSchema.safeParse(input);
-  if (!parsed.success) {
-    return {
-      status: "error",
-      message: "Please check the highlighted fields.",
-      fieldErrors: toFieldErrors(parsed.error),
-    };
-  }
-
-  const reference = createReference("DZI");
-  await deliver("reservation", { ...parsed.data, reference });
-
-  return {
-    status: "success",
-    reference,
-    message: `Table confirmed. Your reference is ${reference}.`,
-    data: { reference },
-  };
-});
 
 export const submitContact = guard("contact", 5, async (input) => {
   if (isHoneypotHit(input)) return SILENT_SUCCESS;

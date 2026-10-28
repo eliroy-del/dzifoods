@@ -17,7 +17,6 @@ import { cn } from "@/lib/utils";
 
 const PRIMARY_LINKS = [
   { label: "Menus", href: "/menu" },
-  { label: "Reservations", href: "/reservations" },
   { label: "Order online", href: "/order" },
   { label: "Our story", href: "/about" },
   { label: "Events", href: "/events" },
@@ -182,10 +181,10 @@ export function MobileNav({ tone = "auto" }: { tone?: "auto" | "light" }) {
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <Button asChild variant="outline" size="md" uppercase>
-                    <Link href="/order">Order</Link>
+                    <Link href="/menu">Menu</Link>
                   </Button>
                   <Button asChild variant="ember" size="md" uppercase>
-                    <Link href="/reservations">Reserve</Link>
+                    <Link href="/order">Order</Link>
                   </Button>
                 </div>
               </div>

@@ -20,9 +20,9 @@ interface CallToActionProps {
 
 /** The closing conversion band, reused at the foot of every page. */
 export function CallToAction({
-  eyebrow = "One table, one evening",
-  title = "Reserve your table today.",
-  description = "Thursday through Saturday books out about ten days ahead. Weeknights are quieter, and — between us — the better secret.",
+  eyebrow = "Hungry?",
+  title = "Order from DZIFOODS today.",
+  description = "Weekday plates, weekend soups and pre-order specials — delivery across Accra or ready for pickup.",
   className,
   image = "/images/guests-celebration.webp",
 }: CallToActionProps) {
@@ -53,8 +53,8 @@ export function CallToAction({
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Button asChild variant="ember" size="xl" uppercase>
-              <Link href="/reservations">
-                Reserve now
+              <Link href="/order">
+                Order now
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
             </Button>

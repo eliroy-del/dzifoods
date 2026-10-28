@@ -6,7 +6,6 @@ import Link from "next/link";
 
 import { Embers } from "@/components/motion/interactions";
 import { TextReveal } from "@/components/motion/reveal";
-import { ReservationWidget } from "@/components/reservation/reservation-widget";
 import { Button } from "@/components/ui/button";
 import { ImageFrame } from "@/components/ui/media";
 import { Marquee } from "@/components/ui/section";
@@ -17,7 +16,7 @@ import { cn } from "@/lib/utils";
  * The three-second sell.
  *
  * A full-bleed live-fire photograph, a slow ken-burns drift, drifting embers and
- * one decision to make: reserve, or order.
+ * one decision: order online or explore the menu.
  */
 export function Hero() {
   const reduceMotion = useReducedMotion();
@@ -27,7 +26,6 @@ export function Hero() {
       aria-labelledby="hero-heading"
       className="bg-forest-deep grain relative isolate flex min-h-[100svh] flex-col justify-end overflow-hidden pt-32 pb-10 lg:pt-40"
     >
-      {/* Backdrop */}
       <div aria-hidden className="absolute inset-0 -z-10">
         <ImageFrame
           src="/images/hero-signature.webp"
@@ -47,63 +45,49 @@ export function Hero() {
       <Embers count={22} />
 
       <div className="container-luxe relative z-2">
-        <div className="grid items-end gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
-          <div className="max-w-2xl">
-            <h1
-              id="hero-heading"
-              className="text-[clamp(2.6rem,7vw,5.4rem)] leading-[0.98] font-medium text-white"
-            >
-              <TextReveal text="Experience dining" as="span" className="block" />
-              <TextReveal
-                text="like never before."
-                as="span"
-                className="text-gradient-gold block italic"
-                delay={0.28}
-              />
-            </h1>
+        <div className="max-w-2xl">
+          <h1
+            id="hero-heading"
+            className="text-[clamp(2.6rem,7vw,5.4rem)] leading-[0.98] font-medium text-white"
+          >
+            <TextReveal text="Experience dining" as="span" className="block" />
+            <TextReveal
+              text="like never before."
+              as="span"
+              className="text-gradient-gold block italic"
+              delay={0.28}
+            />
+          </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-7 max-w-lg text-lg leading-relaxed text-white/75 md:text-xl"
-            >
-              Fresh ingredients. Masterful chefs. Memorable moments. Twelve years of live-fire cooking
-              in the heart of Accra — and one table with your name on it.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.85, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-9 flex flex-wrap items-center gap-4"
-            >
-              <Button asChild variant="ember" size="xl" uppercase>
-                <Link href="/reservations">
-                  Reserve a table
-                  <ArrowRight className="size-4" aria-hidden />
-                </Link>
-              </Button>
-              <Button asChild variant="glass" size="xl" uppercase>
-                <Link href="/order">
-                  <UtensilsCrossed className="size-4" aria-hidden />
-                  Order online
-                </Link>
-              </Button>
-            </motion.div>
-
-          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-7 max-w-lg text-lg leading-relaxed text-white/75 md:text-xl"
+          >
+            Fresh ingredients. Masterful chefs. Memorable moments. Twelve years of live-fire cooking
+            in the heart of Accra.
+          </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 34 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.9, delay: 0.85, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-9 flex flex-wrap items-center gap-4"
           >
-            <ReservationWidget />
+            <Button asChild variant="ember" size="xl" uppercase>
+              <Link href="/order">
+                <UtensilsCrossed className="size-4" aria-hidden />
+                Order online
+                <ArrowRight className="size-4" aria-hidden />
+              </Link>
+            </Button>
+            <Button asChild variant="glass" size="xl" uppercase>
+              <Link href="/menu">View menu</Link>
+            </Button>
           </motion.div>
         </div>
 
-        {/* Popular tonight */}
         <div className="mt-14 border-t border-white/10 pt-6">
           <div className="flex items-center gap-6">
             <p className="font-ui shrink-0 text-[0.62rem] font-semibold tracking-[0.24em] text-white/45 uppercase">

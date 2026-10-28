@@ -62,7 +62,7 @@ export default function GalleryPage() {
       <CallToAction
         eyebrow="See it live"
         title="Photographs are one thing. The room is another."
-        description="Book a table and see why every frame here was taken after service, not before."
+        description="Come taste why every frame here was taken after service, not before."
       />
     </>
   );

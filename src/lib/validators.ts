@@ -1,6 +1,7 @@
 import { z } from "zod";
 
-import { RESERVATION_SETTINGS } from "@/constants/site";
+/** How far ahead guests can pick dates on event / gift-card forms. */
+const ADVANCE_DAYS = 90;
 
 /**
  * One schema per form, shared by the client (React Hook Form) and the server
@@ -49,50 +50,11 @@ const isoDate = z
   .refine((value) => {
     const picked = new Date(`${value}T00:00:00`);
     const limit = new Date();
-    limit.setDate(limit.getDate() + RESERVATION_SETTINGS.advanceDays);
+    limit.setDate(limit.getDate() + ADVANCE_DAYS);
     return picked <= limit;
-  }, `We take bookings up to ${RESERVATION_SETTINGS.advanceDays} days ahead`);
+  }, `Please choose a date within the next ${ADVANCE_DAYS} days`);
 
 const time = z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/, "Choose a time");
-
-/* -------------------------------------------------------------------------- */
-/*                                 Reservation                                */
-/* -------------------------------------------------------------------------- */
-
-export const reservationSchema = z.object({
-  firstName: name,
-  lastName: name,
-  email,
-  phone,
-  guests: z
-    .number()
-    .int()
-    .min(1, "At least one guest")
-    .max(
-      RESERVATION_SETTINGS.maxPartySize,
-      `For ${RESERVATION_SETTINGS.maxPartySize}+ guests, please contact our events team`,
-    ),
-  date: isoDate,
-  time,
-  occasion: z.enum([
-    "none",
-    "birthday",
-    "anniversary",
-    "business",
-    "wedding",
-    "date-night",
-    "celebration",
-  ]),
-  seating: z.enum(["indoor", "terrace", "chefs-counter", "private-room"]),
-  requests: message(0, 600, "note").or(z.literal("")).optional(),
-  dietary: z.array(z.string().max(40)).max(8).optional(),
-  marketingOptIn: z.boolean().optional(),
-  agreeToPolicy: z.literal(true, { error: "Please accept the cancellation policy" }),
-  botField: honeypot,
-});
-
-export type ReservationInput = z.input<typeof reservationSchema>;
-export type ReservationValues = z.output<typeof reservationSchema>;
 
 /* -------------------------------------------------------------------------- */
 /*                                   Contact                                  */
@@ -102,7 +64,7 @@ export const contactSchema = z.object({
   name,
   email,
   phone: phone.or(z.literal("")).optional(),
-  topic: z.enum(["general", "reservations", "events", "feedback", "press", "careers"]),
+  topic: z.enum(["general", "orders", "events", "feedback", "press", "careers"]),
   message: message(10, 1500),
   botField: honeypot,
 });

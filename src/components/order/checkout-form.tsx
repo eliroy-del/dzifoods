@@ -158,7 +158,7 @@ export function CheckoutForm() {
               <Link href="/menu">Order something else</Link>
             </Button>
             <Button asChild variant="outline" size="lg" uppercase>
-              <Link href="/reservations">Book a table instead</Link>
+              <Link href="/contact">Contact us</Link>
             </Button>
           </>
         }

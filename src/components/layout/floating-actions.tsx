@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUp, Bot, CalendarCheck, Phone, Plus, X } from "lucide-react";
+import { ArrowUp, Bot, Phone, Plus, ShoppingBag, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -12,7 +12,7 @@ import { useScrollState } from "@/hooks";
 import { cn } from "@/lib/utils";
 
 /**
- * Floating action cluster: WhatsApp, call, reserve, back-to-top and the
+ * Floating action cluster: WhatsApp, call, order, back-to-top and the
  * concierge chat entry point.
  *
  * Collapsed to a single button by default so it never competes with the
@@ -41,10 +41,10 @@ export function FloatingActions() {
       className: "bg-forest text-cream",
     },
     {
-      key: "reserve",
-      label: "Reserve a table",
-      href: "/reservations",
-      icon: CalendarCheck,
+      key: "order",
+      label: "Order online",
+      href: "/order",
+      icon: ShoppingBag,
       external: false,
       className: "bg-accent text-accent-foreground",
     },

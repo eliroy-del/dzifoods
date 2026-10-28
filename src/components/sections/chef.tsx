@@ -94,8 +94,8 @@ export function ChefSection({ className }: { className?: string }) {
 
             <Reveal delay={0.1} className="mt-10 flex flex-wrap gap-4">
               <Button asChild variant="ember" size="lg" uppercase>
-                <Link href="/reservations?seating=chefs-counter">
-                  Book the chef&rsquo;s counter
+                <Link href="/order">
+                  Order online
                   <ArrowRight className="size-4" aria-hidden />
                 </Link>
               </Button>

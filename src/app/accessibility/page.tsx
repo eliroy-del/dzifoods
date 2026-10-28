@@ -26,7 +26,7 @@ export default function AccessibilityPage() {
       <LegalPage
         title="Accessibility"
         eyebrow="Inclusive dining"
-        description="Everyone should be able to book a table, read our menu and enjoy the room. Here is what we have done and what we are still working on."
+        description="Everyone should be able to read our menu, place an order and enjoy the room. Here is what we have done and what we are still working on."
         updated="August 2026"
         path="/accessibility"
       >

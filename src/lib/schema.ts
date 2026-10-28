@@ -48,7 +48,6 @@ export function restaurantSchema() {
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT.mapQuery)}`,
     openingHoursSpecification: getSchemaOpeningHours(),
     sameAs: SOCIALS.map((social) => social.href),
-    acceptsReservations: absoluteUrl("/reservations"),
     hasMenu: absoluteUrl("/menu"),
     aggregateRating: {
       "@type": "AggregateRating",
@@ -65,7 +64,6 @@ export function restaurantSchema() {
       { "@type": "LocationFeatureSpecification", name: "Live music", value: true },
     ],
     makesOffer: [
-      { "@type": "Offer", name: "Table reservations", url: absoluteUrl("/reservations") },
       { "@type": "Offer", name: "Delivery & collection", url: absoluteUrl("/order") },
       { "@type": "Offer", name: "Gift cards", url: absoluteUrl("/gift-cards") },
     ],

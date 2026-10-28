@@ -63,7 +63,7 @@ export default function TestimonialsPage() {
         ]}
         actions={
           <Button asChild variant="ember" size="lg" uppercase>
-            <Link href="/reservations">Book your table</Link>
+            <Link href="/order">Order online</Link>
           </Button>
         }
       />

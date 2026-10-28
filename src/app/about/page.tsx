@@ -192,8 +192,8 @@ export default function AboutPage() {
             {SITE.awards[0]}
           </p>
           <Button asChild variant="ember" size="lg" uppercase className="mt-8">
-            <Link href="/reservations">
-              Come see it for yourself
+            <Link href="/order">
+              Order online
               <ArrowRight className="size-4" aria-hidden />
             </Link>
           </Button>

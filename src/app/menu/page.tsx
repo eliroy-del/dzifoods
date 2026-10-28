@@ -69,15 +69,15 @@ export default async function MenuPage({ searchParams }: MenuPageProps) {
         actions={
           <>
             <Button asChild variant="ember" size="lg" uppercase>
-              <Link href="/reservations">
-                <UtensilsCrossed className="size-4" aria-hidden />
-                Reserve a table
-              </Link>
-            </Button>
-            <Button asChild variant="glass" size="lg" uppercase>
               <Link href="/order">
                 <ShoppingBag className="size-4" aria-hidden />
                 Order online
+              </Link>
+            </Button>
+            <Button asChild variant="glass" size="lg" uppercase>
+              <Link href="/contact">
+                <UtensilsCrossed className="size-4" aria-hidden />
+                Contact us
               </Link>
             </Button>
           </>

@@ -27,9 +27,9 @@ interface ContactPageProps {
   searchParams: Promise<{ topic?: string }>;
 }
 
-const TOPIC_MAP: Record<string, "general" | "reservations" | "events" | "feedback" | "press" | "careers"> = {
+const TOPIC_MAP: Record<string, "general" | "orders" | "events" | "feedback" | "press" | "careers"> = {
   general: "general",
-  reservations: "reservations",
+  orders: "orders",
   events: "events",
   feedback: "feedback",
   press: "press",
@@ -112,7 +112,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           <Reveal delay={0.1}>
             <h2 className="font-display text-3xl leading-tight">Send a message</h2>
             <p className="text-muted-foreground mt-3 text-sm">
-              We reply within one working day. For reservations tonight, call is faster.
+              We reply within one working day. For orders today, call or WhatsApp is faster.
             </p>
             <div className="mt-8">
               <ContactForm defaultTopic={defaultTopic} />
@@ -137,7 +137,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             <a href={CONTACT.phoneHref} className="text-accent link-underline">
               {CONTACT.phone}
             </a>
-            <p className="text-muted-foreground mt-2 text-xs">Reservations & general · 09:00 – 22:00</p>
+            <p className="text-muted-foreground mt-2 text-xs">Orders & general · 09:00 – 22:00</p>
           </ContactCard>
 
           <ContactCard icon={<Mail className="size-5" aria-hidden />} title="Email">

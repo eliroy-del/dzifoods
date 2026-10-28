@@ -7,7 +7,6 @@ import { absoluteUrl } from "@/lib/seo";
 const ROUTES: readonly { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
   { path: "/menu", priority: 0.9, changeFrequency: "weekly" },
-  { path: "/reservations", priority: 0.9, changeFrequency: "monthly" },
   { path: "/order", priority: 0.85, changeFrequency: "monthly" },
   { path: "/about", priority: 0.8, changeFrequency: "monthly" },
   { path: "/events", priority: 0.8, changeFrequency: "weekly" },

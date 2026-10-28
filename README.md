@@ -29,7 +29,6 @@ Open [http://localhost:3000](http://localhost:3000).
 | `/menu` | Full menu with search, filters, favourites, cart |
 | `/order` | Online ordering overview |
 | `/order/checkout` | Checkout flow with server action |
-| `/reservations` | Table booking form |
 | `/events` | Events calendar + seat booking |
 | `/about` | Story, timeline, chef, values |
 | `/gallery` | Masonry grid + keyboard lightbox |

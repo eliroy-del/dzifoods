@@ -134,7 +134,7 @@ export function Header() {
               <CartButton />
 
               <Button asChild variant="ember" size="md" uppercase className="hidden sm:inline-flex">
-                <Link href="/reservations">Reserve</Link>
+                <Link href="/order">Order</Link>
               </Button>
 
               <MobileNav tone={overlay ? "light" : "auto"} />

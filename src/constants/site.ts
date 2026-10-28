@@ -1,4 +1,4 @@
-import type { Coupon, Currency, Locale, NavItem, Occasion, SeatingOption } from "@/types";
+import type { Coupon, Currency, Locale, NavItem } from "@/types";
 
 /**
  * Single source of truth for brand, contact and commercial settings.
@@ -32,9 +32,9 @@ export const CONTACT = {
   phoneHref: "tel:+233302748000",
   whatsapp: "+233 55 019 8844",
   whatsappHref: "https://wa.me/233550198844",
-  whatsappMessage: "Hello DZIFOODS — I'd like to ask about a reservation.",
+  whatsappMessage: "Hello DZIFOODS — I'd like to place an order.",
   email: "hello@dzifoods.com",
-  reservationsEmail: "reservations@dzifoods.com",
+  reservationsEmail: "hello@dzifoods.com",
   eventsEmail: "events@dzifoods.com",
   careersEmail: "careers@dzifoods.com",
   address: {
@@ -109,52 +109,6 @@ export const COUPONS: readonly Coupon[] = [
   { code: "HARVEST20", label: "20% off the harvest menu", percentOff: 0.2, minimumSubtotal: 650 },
 ];
 
-export const OCCASIONS: readonly Occasion[] = [
-  { id: "none", label: "Just dinner", description: "No occasion — simply a very good table." },
-  { id: "birthday", label: "Birthday", description: "We'll finish with a candle and a chef's sweet." },
-  { id: "anniversary", label: "Anniversary", description: "Rose petals, a quiet corner, and a toast on us." },
-  { id: "business", label: "Business", description: "Discreet seating, timed courses, one clean bill." },
-  { id: "wedding", label: "Wedding", description: "Rehearsal dinners and intimate ceremonies." },
-  { id: "date-night", label: "Date night", description: "Candlelight, low music, no rush." },
-  { id: "celebration", label: "Celebration", description: "Graduations, promotions, good news of any size." },
-];
-
-export const SEATING_OPTIONS: readonly SeatingOption[] = [
-  {
-    id: "indoor",
-    label: "Main dining room",
-    description: "Velvet banquettes under brass pendants, the heart of the house.",
-    capacity: "1 – 8 guests",
-  },
-  {
-    id: "terrace",
-    label: "Garden terrace",
-    description: "Open-air seating wrapped in palms and warm lanterns.",
-    capacity: "1 – 10 guests",
-  },
-  {
-    id: "chefs-counter",
-    label: "Chef's counter",
-    description: "Eight stools facing the fire, with courses handed to you directly.",
-    capacity: "1 – 4 guests",
-  },
-  {
-    id: "private-room",
-    label: "The Cellar",
-    description: "Our private room behind the wine wall, doors closed.",
-    capacity: "10 – 24 guests",
-  },
-];
-
-export const RESERVATION_SETTINGS = {
-  maxPartySize: 12,
-  /** Larger tables are routed to the private dining team instead. */
-  largePartyThreshold: 12,
-  slotIntervalMinutes: 30,
-  holdMinutes: 15,
-  advanceDays: 90,
-} as const;
-
 /* -------------------------------------------------------------------------- */
 /*                                 Navigation                                 */
 /* -------------------------------------------------------------------------- */
@@ -196,9 +150,8 @@ export const FOOTER_NAV = [
     title: "Dine",
     links: [
       { label: "Menus", href: "/menu" },
-      { label: "Reservations", href: "/reservations" },
       { label: "Order online", href: "/order" },
-      { label: "Weekend brunch", href: "/events" },
+      { label: "Events", href: "/events" },
       { label: "Gift cards", href: "/gift-cards" },
     ],
   },
