@@ -305,11 +305,6 @@ export function MenuExplorer({ initialCategory = "all", initialQuery = "" }: Men
           {category !== "all" ? ` in ${MENU_CATEGORIES.find((c) => c.id === category)?.name}` : ""}
           {deferredQuery ? ` matching “${deferredQuery}”` : ""}
         </p>
-        {category !== "all" ? (
-          <Badge variant="gold" size="sm">
-            {MENU_CATEGORIES.find((c) => c.id === category)?.tagline}
-          </Badge>
-        ) : null}
       </div>
 
       {results.length === 0 ? (

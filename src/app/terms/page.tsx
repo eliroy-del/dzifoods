@@ -38,8 +38,7 @@ export default function TermsPage() {
 
         <LegalSection title="Online orders">
           <p>
-            Minimum order value is ₵{ORDER_SETTINGS.minimumOrder}. Delivery is available within{" "}
-            {ORDER_SETTINGS.deliveryRadius}. Estimated times ({ORDER_SETTINGS.deliveryEstimate} for
+            Minimum order value is ₵{ORDER_SETTINGS.minimumOrder}. Estimated times ({ORDER_SETTINGS.deliveryEstimate} for
             delivery, {ORDER_SETTINGS.pickupEstimate} for collection) are indicative, not guaranteed.
           </p>
           <p>

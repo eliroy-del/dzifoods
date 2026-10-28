@@ -173,8 +173,7 @@ export function CheckoutForm() {
         </span>
         <h2 className="font-display mt-6 text-2xl">There’s nothing to check out yet</h2>
         <p className="text-muted-foreground mx-auto mt-3 max-w-md text-sm">
-          Add a few dishes and we’ll hold your place in the queue. Delivery covers{" "}
-          {ORDER_SETTINGS.deliveryRadius}.
+          Add a few dishes and we’ll hold your place in the queue.
         </p>
         <Button asChild variant="ember" size="lg" uppercase className="mt-8">
           <Link href="/menu">Browse the menu</Link>
@@ -203,7 +202,7 @@ export function CheckoutForm() {
             <RadioCard
               value="delivery"
               label="Delivery"
-              description={`${ORDER_SETTINGS.deliveryRadius}. Free over ${price(ORDER_SETTINGS.freeDeliveryThreshold)}.`}
+              description={`Free over ${price(ORDER_SETTINGS.freeDeliveryThreshold)}.`}
               meta={ORDER_SETTINGS.deliveryEstimate}
               icon={<Bike className="size-4" aria-hidden />}
             />

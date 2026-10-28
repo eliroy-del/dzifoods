@@ -97,7 +97,6 @@ export const ORDER_SETTINGS = {
   minimumOrder: 120,
   deliveryEstimate: "35 – 50 min",
   pickupEstimate: "18 – 25 min",
-  deliveryRadius: "12km across Accra",
 } as const;
 
 export const COUPONS: readonly Coupon[] = [

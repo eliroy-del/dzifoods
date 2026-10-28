@@ -47,7 +47,7 @@ export const FEATURES: readonly Feature[] = [
   {
     id: "delivery",
     title: "Delivery across Accra",
-    description: "Insulated, tracked, and never more than twelve kilometres.",
+    description: "Insulated and tracked, all the way to your door.",
     icon: "Bike",
   },
   {

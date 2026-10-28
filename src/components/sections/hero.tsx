@@ -8,8 +8,6 @@ import { Embers } from "@/components/motion/interactions";
 import { TextReveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 import { ImageFrame } from "@/components/ui/media";
-import { Marquee } from "@/components/ui/section";
-import { POPULAR_DISHES } from "@/constants/menu";
 import { cn } from "@/lib/utils";
 
 /**
@@ -24,7 +22,7 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="bg-forest-deep grain relative isolate flex min-h-[100svh] flex-col justify-end overflow-hidden pt-32 pb-10 lg:pt-40"
+      className="bg-forest-deep grain relative isolate flex min-h-[100svh] flex-col justify-end overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28"
     >
       <div aria-hidden className="absolute inset-0 -z-10">
         <ImageFrame
@@ -86,25 +84,6 @@ export function Hero() {
               <Link href="/menu">View menu</Link>
             </Button>
           </motion.div>
-        </div>
-
-        <div className="mt-14 border-t border-white/10 pt-6">
-          <div className="flex items-center gap-6">
-            <p className="font-ui shrink-0 text-[0.62rem] font-semibold tracking-[0.24em] text-white/45 uppercase">
-              Popular tonight
-            </p>
-            <Marquee speed={38} className="flex-1">
-              {POPULAR_DISHES.slice(0, 8).map((dish) => (
-                <span
-                  key={dish.id}
-                  className="font-display flex items-center gap-3 px-6 text-lg whitespace-nowrap text-white/70"
-                >
-                  {dish.name}
-                  <span aria-hidden className="bg-accent/70 size-1 rotate-45" />
-                </span>
-              ))}
-            </Marquee>
-          </div>
         </div>
       </div>
 

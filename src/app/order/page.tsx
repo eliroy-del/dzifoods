@@ -103,7 +103,7 @@ export default function OrderPage() {
               </span>
               <h2 className="font-display mt-6 text-3xl">Delivery</h2>
               <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
-                {ORDER_SETTINGS.deliveryRadius}, ridden by our own team. Free above{" "}
+                Ridden by our own team. Free above{" "}
                 ₵{ORDER_SETTINGS.freeDeliveryThreshold}, otherwise a flat ₵{ORDER_SETTINGS.deliveryFee}.
               </p>
             </Card>
