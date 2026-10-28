@@ -1,4 +1,4 @@
-import { ShoppingBag, UtensilsCrossed } from "lucide-react";
+import { FileDown, ShoppingBag, UtensilsCrossed } from "lucide-react";
 import Link from "next/link";
 
 import { PageHero } from "@/components/layout/page-hero";
@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { CallToAction } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { DISHES, MENU_GROUPS, isMenuCategoryId } from "@/constants/menu";
+import { DISHES, MENU_GROUPS, MENU_PDF, isMenuCategoryId } from "@/constants/menu";
 import { SITE } from "@/constants/site";
 import { breadcrumbSchema, menuSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -73,6 +73,12 @@ export default async function MenuPage({ searchParams }: MenuPageProps) {
                 <ShoppingBag className="size-4" aria-hidden />
                 Order online
               </Link>
+            </Button>
+            <Button asChild variant="glass" size="lg" uppercase>
+              <a href={MENU_PDF} target="_blank" rel="noopener noreferrer">
+                <FileDown className="size-4" aria-hidden />
+                Download menu
+              </a>
             </Button>
             <Button asChild variant="glass" size="lg" uppercase>
               <Link href="/contact">

@@ -8,6 +8,9 @@ import type { Dish, MenuCategory, MenuCategoryId, MenuGroup } from "@/types";
  * from this file.
  */
 
+/** Printable menu. Replace the file in `public/menu/` when prices change. */
+export const MENU_PDF = "/menu/dzifoods-menu.pdf";
+
 export const MENU_GROUPS: readonly MenuGroup[] = [
   {
     id: "service",
