@@ -60,7 +60,7 @@ function weaknesses(password) {
 const env = loadEnv(new URL("../.env.local", import.meta.url));
 const url = env.NEXT_PUBLIC_SUPABASE_URL;
 const key = env.SUPABASE_SECRET_KEY || env.SUPABASE_SERVICE_ROLE_KEY;
-const email = (process.argv[2] ?? "admin@dzifoods.com").toLowerCase();
+const email = (process.argv[2] ?? "dzifoods@gmail.com").toLowerCase();
 
 if (!url || !key) {
   console.error("Missing NEXT_PUBLIC_SUPABASE_URL or the Supabase secret/service-role key in .env.local.");

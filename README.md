@@ -20,6 +20,8 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run build` | Production build |
 | `npm run start` | Serve production build |
 | `npm run lint` | ESLint |
+| `npm run db:seed` | Import `src/constants/*` into Supabase (idempotent) |
+| `npm run admin:password` | Set the owner/staff password locally |
 
 ## Pages
 
@@ -38,6 +40,8 @@ Open [http://localhost:3000](http://localhost:3000).
 | `/faq` | Filterable FAQ with schema.org markup |
 | `/contact` | Map, hours, contact form |
 | `/privacy`, `/terms`, `/accessibility` | Legal pages |
+| `/admin` | Staff CMS (invite-only). Public site still reads `src/constants/*` until Phase 2 |
+| `/pos`, `/kds` | Protected shells — POS and kitchen display land in Phase 4 |
 
 ## Architecture
 
@@ -67,7 +71,17 @@ src/
 | Variable | Required | Description |
 |----------|----------|-------------|
 | `NEXT_PUBLIC_SITE_URL` | Recommended | Canonical site URL for SEO and Open Graph |
+| `NEXT_PUBLIC_SUPABASE_URL` | Required for admin | Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Required for admin | Legacy anon key (or use the publishable key) |
+| `SUPABASE_SERVICE_ROLE_KEY` | Required for admin | Server-only. Never prefix with `NEXT_PUBLIC_` |
+| `DATABASE_URL` / `DATABASE_URL_DIRECT` | Required for Drizzle | Pooler connection strings (ports 6543 / 5432) |
+| `SEED_OWNER_EMAIL` | Seed only | Owner login, currently `dzifoods@gmail.com` |
+| `POS_PIN_PEPPER` | Required for POS PINs | Random secret mixed into PIN hashes |
 | `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Optional | Enables Google Maps Embed API on the contact page |
+
+Ghana tax rows are seeded as editable data. Confirm current GRA rates before charging tax in Phase 3.
+
+**Auth:** add `http://localhost:3000/**` and your production origin under Supabase Authentication → URL configuration → Redirect URLs so password reset and MFA work.
 
 ## Deployment
 

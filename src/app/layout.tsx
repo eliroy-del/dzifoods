@@ -1,10 +1,5 @@
 import type { Metadata, Viewport } from "next";
 
-import { Footer } from "@/components/layout/footer";
-import { FloatingActions } from "@/components/layout/floating-actions";
-import { Header } from "@/components/layout/header";
-import { ScrollProgress } from "@/components/motion/interactions";
-import { CartSheet } from "@/components/order/cart-sheet";
 import { Providers } from "@/components/providers";
 import { JsonLd } from "@/components/seo/json-ld";
 import { SITE } from "@/constants/site";
@@ -52,7 +47,7 @@ export const metadata: Metadata = {
         url: absoluteUrl("/images/hero-signature.webp"),
         width: 1536,
         height: 1024,
-        alt: "Miso-glazed black cod, the signature dish at DZIFOODS",
+        alt: "Signature plate at DZIFOODS",
       },
     ],
   },
@@ -100,16 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd id="schema-restaurant" data={[restaurantSchema(), websiteSchema()]} />
       </head>
       <body className="bg-background text-foreground flex min-h-dvh flex-col">
-        <Providers>
-          <ScrollProgress />
-          <Header />
-          <main id="main" className="flex-1">
-            {children}
-          </main>
-          <Footer />
-          <FloatingActions />
-          <CartSheet />
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

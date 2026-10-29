@@ -27,7 +27,7 @@ const securityHeaders = [
       "font-src 'self' https://fonts.gstatic.com data:",
       "img-src 'self' data: blob: https://maps.gstatic.com https://maps.googleapis.com https://*.googleusercontent.com",
       "frame-src 'self' https://www.google.com https://maps.google.com",
-      "connect-src 'self' https://maps.googleapis.com",
+      "connect-src 'self' https://maps.googleapis.com https://*.supabase.co wss://*.supabase.co",
       "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self'",
